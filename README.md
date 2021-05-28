@@ -1,6 +1,9 @@
-# The CRM Firm File Taxonomy
+# The CRM Firm File Viewer
 
-Project is a native saleforce application designed to make the storing, retrieving and editing of Content faster and easier.
+View page here [https://firmworks.github.io/FileViewer/](https://firmworks.github.io/FileViewer/)
+
+
+File Viewer is a native salesforce application designed to make the storing, retrieving and editing of Content faster and easier.
 
 - [Features](#Features)
 - [Post Install Config](#Post-Install-Config)
@@ -15,7 +18,7 @@ Search driven by your companies values
 
 ![Search Features](docs/images/search_features.png)
 
-Enjoy heirarchical navigation we have "folders"
+Enjoy hierarchical navigation we have "folders"
 
 ContentDocumentLink to virtual folder object
 
@@ -26,13 +29,17 @@ ContentDocumentLink to virtual folder object
 
     ![global action](docs/images/global_action.png)
 
-1. Add the Lightining Component "File Viewer" to any lightning Record Page Layout to get a contextual view of related content.
+1. Add the Lightning Component "File Viewer" to any lightning Record Page Layout to get a contextual view of related content.
 
     ![page layout](docs/images/page_layout.png)
 
-1. Curate taxonomy fields by adding custom fields onto the ContentVersion Object to control tagging and searchablity. Add picklists, multipicklists, lookup fields, and others to help define the shape of the documents.
+1. Curate Viewer fields by adding custom fields onto the ContentVersion Object to control tagging and searchable. Add picklists, multipicklists, lookup fields, and others to help define the shape of the documents.
     ![custom fields](docs/images/custom_fields.png)
 
-1. Give users permissions to the taxonomy fields and the permission set for 'FileViewer'.
+1. Give users permissions to the Viewer fields and the permission set for 'FileViewer'.
 
 1. Discover and work with files through the File Viewer tab.
+
+# Visit Us
+
+https://www.thecrmfirm.com or at https://getfirmworks.com
