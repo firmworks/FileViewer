@@ -1,6 +1,6 @@
 # The CRM Firm File Viewer
 
-View page here [https://firmworks.github.io/FileViewer/](https://firmworks.github.io/FileViewer/)
+View page here [https://firmworks.github.io/FileViewer/](https://firmworks.github.io/fileviewer/)
 
 
 File Viewer is a native salesforce application designed to make the storing, retrieving and editing of Content faster and easier.
