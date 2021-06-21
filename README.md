@@ -1,4 +1,4 @@
-# The CRM Firm File Viewer
+# firmworks FileViewer
 
 View page here [https://firmworks.github.io/FileViewer/](https://firmworks.github.io/fileviewer/)
 
@@ -42,4 +42,6 @@ Search driven by your companies values
 
 # Visit Us
 
-https://www.thecrmfirm.com or at https://getfirmworks.com
+https://getfirmworks.com
+
+support@getfirmworks.com
