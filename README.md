@@ -12,33 +12,33 @@ File Viewer is a native salesforce application designed to make the storing, ret
 
 Easily Tag Files As They are Uploaded
 
-![Easily Tag Files As you upload them](docs/images/tagging_files.gif)
+![Easily Tag Files As you upload them](images/tagging_files.gif)
 
 Search driven by your companies values
 
-![Search Features](docs/images/search_features.png)
+![Search Features](images/search_features.png)
 
-Enjoy hierarchical navigation we have "folders"
-
-ContentDocumentLink to virtual folder object
 
 
 ## Post Install Config
 
 1. Add the 'Tag and Upload' Global Action to the Global layout or to the layout of any Object
 
-    ![global action](docs/images/global_action.png)
+    ![global action](images/global_action.png)
 
 1. Add the Lightning Component "File Viewer" to any lightning Record Page Layout to get a contextual view of related content.
 
-    ![page layout](docs/images/page_layout.png)
+    ![page layout](images/page_layout.png)
 
 1. Curate Viewer fields by adding custom fields onto the ContentVersion Object to control tagging and searchable. Add picklists, multipicklists, lookup fields, and others to help define the shape of the documents.
-    ![custom fields](docs/images/custom_fields.png)
+    ![custom fields](images/custom_fields.png)
 
 1. Give users permissions to the Viewer fields and the permission set for 'FileViewer'.
 
 1. Discover and work with files through the File Viewer tab.
+
+1. Add taxonomy launcher to any layout to get users to tag files as they upload them.
+    ![File Tag Launcher](images/filetaglauncher.png)
 
 # Visit Us
 
