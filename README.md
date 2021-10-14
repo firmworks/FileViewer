@@ -7,7 +7,7 @@ File Viewer is a native salesforce application designed to make the storing, ret
 
 - [Features](#Features)
 - [Post Install Config](#Post-Install-Config)
-- [Advanced Installation Guide](installation/INSTALL_GUIDE.md)
+- [Advanced Installation Guide](INSTALL_GUIDE.md)
 ## Features
 
 Easily Tag Files As They are Uploaded
