@@ -42,7 +42,6 @@ Accounts:](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t5Y0
 [Sandbox/Scratch
 Orgs](https://test.salesforce.com/packaging/installPackage.apexp?p0=04t5Y0000027FR3QAM)
 
-Required Passcode: Xa26Fqdl3b2Wg
 
 After instillation is complete you will need to do the Follow to allow
 user to be able to use FileViewer:
@@ -58,13 +57,11 @@ To add the default File view tab to other Salesforce apps, navigate to
 Salesforce Setup -\> App Manager -\> click edit on the app you want to
 add the tab to.
 
-![](.//media/image1.png){width="7.073534558180228in"
-height="3.477821522309711in"}Once in the App Settings click on
+![](media/image1.png)Once in the App Settings click on
 Navigation Items and find the File Viewer tab on the left and move it to
 the right then click save.
 
-![](.//media/image2.png){width="7.1130839895013125in"
-height="3.497268153980752in"}
+![](media/image2.png)
 
 ## Creating a new File Viewer Tab
 
@@ -80,7 +77,7 @@ firrmworks:filetaxonomylauncher is a UI for tagging and uploading new
 documents. For more please see the Component Overview section of this
 document.
 
-![](.//media/image3.png)
+![](media/image3.png)
 
 
 ## Creating FileViewer Quick Action
@@ -90,11 +87,11 @@ Firmworks you can create a File Viewer Quick Action, go to the
 Salesforce Setup -\> Object Manager -\> The object where you want the
 quick action. Then click New Action
 
-![](.//media/image4.png)Once in the New Action Creation UI set the
+![](media/image4.png)Once in the New Action Creation UI set the
 Action Type for Lightning Component and the Lightning Component to
 firrmworks:filetaxonomy. You can set the other variables to any values
 you desire.\
-![](.//media/image5.png)
+![](media/image5.png)
 
 Once you save the action add it to the page layout using the Page
 Layouts section of the Object Manager.
@@ -103,7 +100,7 @@ Layouts section of the Object Manager.
 
 You can add any of the following components to a page layout
 
-![](.//media/image6.png)
+![](media/image6.png)
 
 Each Component has a series of Design Options you can use to customize
 each Component:
@@ -279,7 +276,7 @@ The FileViewer App will automatically assume any custom field on the
 Content Version should be used for tagging and will add it to the Tag
 and Upload UI where it is used.
 
-![](.//media/image7.png)
+![](media/image7.png)
 
 If you have custom fields, you do not desire to use for tagging or want
 to change the order they display in the Tag and Upload UI \...
@@ -298,7 +295,7 @@ on the right, then navigate to the Custom Components Section. From here
 you can drag either the File View or File Tag Launcher Component onto
 the community page.\
 \
-![](.//media/image8.png)
+![](media/image8.png)
 
 From here you can follow the record page Configuration section above to
 configure the components.
@@ -307,7 +304,7 @@ configure the components.
 
 ## FileViewer
 
-![](.//media/image9.png)
+![](media/image9.png)
 
 1.  Search Section: The topmost bar will allow you to search any of the
     object allowed to be search from the setup of the component. If
@@ -320,12 +317,12 @@ configure the components.
     b.  Clicking the + button below the 'Within The Following Date
         Ranges:' section will result in a date filter section being
         added.\
-        ![](.//media/image10.png)\
+        ![](media/image10.png)\
         This allows you to use the date fields on the Content Version to
         filter. If you choose Custom range, you will be given a date
         picker UI to choose the dates:\
         \
-        ![](.//media/image11.png)\
+        ![](media/image11.png)\
         This can be added multiple times. Once you add dates to filter
         on click the Apply button.
 
@@ -350,15 +347,15 @@ configure the components.
 
     a.  This displays the number of records returned form the search.
 
-    b.  ![](.//media/image12.png)Clicking this will toggle the
+    b.  ![](media/image12.png)Clicking this will toggle the
         search section from visible (blue) to not visible (white)
 
-    c.  ![](.//media/image13.png)Clicking this will toggle the
+    c.  ![](media/image13.png)Clicking this will toggle the
         results section from list view (blue) to tile view (white)
 
 []{#_Toc78542078 .anchor}FileTaxonomyLauncher\
 \
-![](.//media/image14.png)
+![](media/image14.png)
 
 When using this UI please make sure you follow the steps in order (1 -\>
 2 -\> 3) to make sure tagging and sharing works correctly with each
