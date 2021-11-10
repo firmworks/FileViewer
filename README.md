@@ -8,6 +8,7 @@ File Viewer is a native salesforce application designed to make the storing, ret
 - [Features](#Features)
 - [Post Install Config](#Post-Install-Config)
 - [Advanced Installation Guide](installation/FileViewer%20Documentation.pdf)
+
 ## Features
 
 Easily Tag Files As They are Uploaded
@@ -17,8 +18,6 @@ Easily Tag Files As They are Uploaded
 Search driven by your companies values
 
 ![Search Features](images/search_features.png)
-
-
 
 ## Post Install Config
 
