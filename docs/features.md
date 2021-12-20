@@ -1,7 +1,7 @@
-![](./quickStartImages/image1.jpeg)
+![](./images/fileviewer.png)
 [Documentation](index.md)
 
-## Features
+# Features
 
 Easily Tag Files As They are Uploaded
 

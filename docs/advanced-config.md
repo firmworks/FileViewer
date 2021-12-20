@@ -1,5 +1,7 @@
+![](./images/fileviewer.png)
+[Documentation](index.md)
 
-## Additional Setup
+# Additional Setup
 
 - [Additional Optional Setup](#additional-optional-setup)
    - [Assigning the Default Tab to Apps](#assigning-the-default-tab-to-apps)

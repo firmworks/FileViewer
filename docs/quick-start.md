@@ -1,8 +1,7 @@
-![](./quickStartImages/image1.jpeg)
-
+![](./quickStartImages/fileviewer.png)
 [Documentation](index.md)
 
-<p style="text-align: center;">Quick Start Guide</p>
+# Quick Start Guide
 
 ## How to Grant User Access and FileViewer Licenses
 
