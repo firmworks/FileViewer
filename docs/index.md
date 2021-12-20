@@ -1,6 +1,6 @@
 # firmworks FileViewer
 
-File Viewer is a native salesforce application designed to make the storing, retrieving and editing of Content faster and easier.
+FileViewer is a native salesforce application designed to make the storing, retrieving and editing of Content faster and easier.
 
 - [Features](#features)
 - [Post Install Config](#post-install-config)
@@ -9,15 +9,15 @@ File Viewer is a native salesforce application designed to make the storing, ret
    - [Creating FileViewer Quick Action](#creating-fileviewer-quick-action)
 - [Additional Optional Setup](#additional-optional-setup)
    - [Assigning the Default Tab to Apps](#assigning-the-default-tab-to-apps)
-   - [Creating a new File Viewer Tab](#creating-a-new-file-viewer-tab)
+   - [Creating a new FileViewer Tab](#creating-a-new-file-viewer-tab)
    - [Configuring a Record Page Layout](#configuring-a-record-page-layout)
       - [File Tag Launcher](#file-tag-launcher)
       - [File Tagger](#file-tagger)
-      - [File Viewer](#file-viewer)
-   - [Setting up a File Viewer Configuration Metadata Record](#setting-up-a-file-viewer-configuration-metadata-record)
+      - [FileViewer](#file-viewer)
+   - [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-file-viewer-configuration-metadata-record)
    - [Configuration for Experience Page](#configuration-for-experience-page)
 - [Component Appendix ](#component-appendix)
-   - [File Viewer Appendix](#file-viewer-appendix)
+   - [FileViewer Appendix](#file-viewer-appendix)
    - [File Tag Launcher Appendix](#file-tag-launcher-appendix)
 - [Visit Us](#visit-us)
 - [Release Notes](release-notes.md)
@@ -32,7 +32,7 @@ Search driven by your companies values
 
 ![Search Features](images/search_features.png)
 
-<!--Embedded Related File Viewer
+<!--Embedded Related FileViewer
 
 ![View file content directly on a layout](images/embedded_viewer.gif) -->
 
@@ -42,7 +42,7 @@ Search driven by your companies values
 
     ![global action](images/global_action.png)
 
-1. Add the Lightning Component "File Viewer" to any lightning Record Page Layout to get a contextual view of related content.
+1. Add the Lightning Component "FileViewer" to any lightning Record Page Layout to get a contextual view of related content.
 
     ![page layout](images/page_layout.png)
 
@@ -51,7 +51,7 @@ Search driven by your companies values
 
 1. Give users permissions to the Viewer fields and the permission set for 'FileViewer'.
 
-1. Discover and work with files through the File Viewer tab.
+1. Discover and work with files through the FileViewer tab.
 
 1. Add taxonomy launcher to any layout to get users to tag files as they upload them.
     ![File Tag Launcher](images/filetaglauncher.png)
@@ -68,26 +68,26 @@ You can adjust the default fields shown in the FileViewer Package component by s
 
 ![FileViewer Display Fields 1](images/fileviewer-display-fields1.png)
 
-In the File Viewer Component there are two design elements. Display Fields change the field visible in the table view of documents and Filter Fields changes the visible fields in the search bar on the left.
+In the FileViewer Component there are two design elements. Display Fields change the field visible in the table view of documents and Filter Fields changes the visible fields in the search bar on the left.
 
 ![FileViewer Display Fields 2](images/fileviewer-display-fields2.png)
 
 ### **Creating FileViewer Quick Action**
 
-1. If you do not want to use the Global Action Provided out of box by Firmworks you can create a File Viewer Quick Action, by going to the Salesforce Setup -> Object Manager -> The object where you want the quick action. Then click New Action
+1. If you do not want to use the Global Action Provided out of box by Firmworks you can create a FileViewer Quick Action, by going to the Salesforce Setup -> Object Manager -> The object where you want the quick action. Then click New Action
 ![Quick Action Access](images/quick_action_access.png)
 
 1. Once in the New Action Creation UI set the Action Type for Lightning Component and the Lightning Component to firmworks:filetaxonomy. You can set the other variables to any values you desire.
-![File Viewer Quick Action](images/fileviewer_quick_action.png)
+![FileViewer Quick Action](images/fileviewer_quick_action.png)
 
 1. Once you save the action add it to the page layout using the Page Layouts section of the Object Manager.
 
 ### **Modifying Display Fields in FileViewer Quick Action**
 
-In order to modify display fields on the Quick Action you must create a configuration with the field you want to see. The configuration name needs to match the object API name as it is in Salesforce. EX. Account is Account, Custom Object A is Custom_Object_A__c. See [Setting up a File Viewer Configuration Metadata Record](#setting-up-a-file-viewer-configuration-metadata-record) for more information on setting up a configuration.
+In order to modify display fields on the Quick Action you must create a configuration with the field you want to see. The configuration name needs to match the object API name as it is in Salesforce. EX. Account is Account, Custom Object A is Custom_Object_A__c. See [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-file-viewer-configuration-metadata-record) for more information on setting up a configuration.
 
 Here is an example record build on the Account with custom tags added:
-![File Viewer Quick Action Metadata Config](images/fileviewer-quick-action-metadata-config1.png)
+![FileViewer Quick Action Metadata Config](images/fileviewer-quick-action-metadata-config1.png)
 
 ## **Additional Optional Setup**
 
@@ -97,15 +97,15 @@ Here is an example record build on the Account with custom tags added:
 
 ![FileViewer Tab Setup1](images/fileviewer-tab-setup1.png)
 
-1. Once in the App Settings click on Navigation Items and find the File Viewer tab on the left and move it to the right then click save.
+1. Once in the App Settings click on Navigation Items and find the FileViewer tab on the left and move it to the right then click save.
 
 ![FileViewer Tab Setup2](images/fileviewer-tab-setup2.png)
 
-### **Creating a new File Viewer Tab**
+### **Creating a new FileViewer Tab**
 
-1. To Create a new File Viewer tab, go to Salesforce Setup -> Tabs -> Lighting Component Tabs. Then Choose one of the two file viewer components that you want to see in the tab, then click next to assign profiles and apps to the new tab.
+1. To Create a new FileViewer tab, go to Salesforce Setup -> Tabs -> Lighting Component Tabs. Then Choose one of the two FileViewer components that you want to see in the tab, then click next to assign profiles and apps to the new tab.
 
-   firmworks:fileviewer is the Component you see in the Default File Viewer Tab
+   firmworks:fileviewer is the Component you see in the Default FileViewer Tab
 
    firmworks:filetaxonomylauncher is a UI for tagging and uploading new documents. For more please see the Component Overview section of this document.
 
@@ -141,7 +141,7 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Launched Screens Title - The title of the UI component once the button is clicked
 
-   1. Configuration Name – The name of the File Viewer Configurations Metadata record you want to use to source your tag launcher screen
+   1. Configuration Name – The name of the FileViewer Configurations Metadata record you want to use to source your tag launcher screen
 
    1. Filter Fields - A comma delimited list of Content Version fields you want to filter by.
 
@@ -179,7 +179,7 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Allowed File Types – a comma delimited list of file types the user is allowed to upload.
 
-   1. Configuration Name – The name of the File Viewer Configurations Metadata record you want to use to source your tagger screen
+   1. Configuration Name – The name of the FileViewer Configurations Metadata record you want to use to source your tagger screen
 
    1. Allow Multiple Documents - This box will allow the user to upload multiple documents with oud having to close and reopen the UI.
 
@@ -203,7 +203,7 @@ Each Component has a series of Design Options you can use to customize each Comp
 
       1. InternalUsers – Defaults the toggle to Default
 
-#### **File Viewer**
+#### **FileViewer**
 
 1. Appearance:
 
@@ -225,7 +225,7 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Record Id – Use this to give context to the component so it only shows records related to the provided record Id.
 
-   1. Name - The name of the File Viewer Configurations Metadata record you want to use to source your viewer screen
+   1. Name - The name of the FileViewer Configurations Metadata record you want to use to source your viewer screen
 
    1. Search Objects – Comma delimited list of objects the user can search against
 
@@ -239,14 +239,14 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Cache Id – If you want the behavior to be different between instances of the file's viewer. Use this variable to a unique variable or name to reference the way you have the component set up in each place. If you have the component set up on the account a very specific, you want to use for every object, use the cache id to not have to setup all the settings again.
 
-### **Setting up a File Viewer Configuration Metadata Record**
-If you want to use the same configuration for more than one use of the component you can create a File Viewer Configuration Metadata record. The Metadata fields are a subset of fields you see in the components design.
+### **Setting up a FileViewer Configuration Metadata Record**
+If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration Metadata record. The Metadata fields are a subset of fields you see in the components design.
 
 ![fileviewer metadata configuration](images/fileviewer-metadata-setup.png)
 
 See more on metadata in Trailhead from Salesforce [Metadata Trailhead](https://trailhead.salesforce.com/en/content/learn/projects/add-sound-effects-to-your-sf-org/create-a-custom-metadata-record-sound)
 
-Once created reference the File Viewer Configuration Name in the components Configuration Name design element.
+Once created reference the FileViewer Configuration Name in the components Configuration Name design element.
 
 ![fileviewer metadata configuration reference](images/fileviewer-metadata-setup2.png)
 
@@ -268,9 +268,9 @@ You will need to share the following apex classes with your Experience user prof
 
 ## **Component Appendix**
 
-#### **File Viewer Appendix**
+#### **FileViewer Appendix**
 
-![File Viewer Component](images/fileviewer_component_overview.png)
+![FileViewer Component](images/fileviewer_component_overview.png)
 
 1. Search Section: The topmost bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
 
@@ -297,7 +297,7 @@ You will need to share the following apex classes with your Experience user prof
 
    1. All tags on the Content Document object
 
-1. This section will allow you to toggle various aspects of the File Viewer page
+1. This section will allow you to toggle various aspects of the FileViewer page
 
    1. This displays the number of records returned form the search.
 
@@ -308,7 +308,7 @@ You will need to share the following apex classes with your Experience user prof
 
 #### **File Tag Launcher Appendix**
 
-![File Viewer Tag Launcher](images/fileviewer_tag_launcher.png)
+![FileViewer Tag Launcher](images/fileviewer_tag_launcher.png)
 
 When using this UI please make sure you follow the steps in order (1 -> 2 -> 3) to make sure tagging and sharing works correctly with each file.
 
