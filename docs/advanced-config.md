@@ -12,7 +12,7 @@
       - [FileViewer](#fileviewer)
    - [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-fileviewer-configuration-metadata-record)
    - [Configuration for Experience Page](#configuration-for-experience-page)
-- [Component Appendix ](#component-appendix)
+- [Component Appendix](#component-appendix)
    - [FileViewer Appendix](#fileviewer-appendix)
    - [File Tag Launcher Appendix](#file-tag-launcher-appendix)
 
@@ -172,14 +172,41 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Cache Id – If you want the behavior to be different between instances of the file's viewer. Use this variable to a unique variable or name to reference the way you have the component set up in each place. If you have the component set up on the account a very specific, you want to use for every object, use the cache id to not have to setup all the settings again.
 
-### **Setting up a FileViewer Configuration Metadata Record**
-If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration Metadata record. The Metadata fields are a subset of fields you see in the components design.
+### **Setting up a FileViewer Configuration**
+If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configuratior tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
 
-![fileviewer metadata configuration](images/fileviewer-metadata-setup.png)
+![fileviewer metadata configuration](images/fileviewer-metadata-setup1.png)
 
-See more on metadata in Trailhead from Salesforce [Metadata Trailhead](https://trailhead.salesforce.com/en/content/learn/projects/add-sound-effects-to-your-sf-org/create-a-custom-metadata-record-sound)
+To create a new Configuration click Add New Configuration on the top right of the app. Click the Configuration to expand it and see the settings. Always start off by giving your configuration a name and deciding if it should be active or inactive. 
 
-Once created reference the FileViewer Configuration Name in the components Configuration Name design element.
+#### Field Options
+
+![fileviewer metadata configuration field options](images/fileviewer-configuration-field-options.png)
+
+In this section you can choose tags from teh Content Version you want to include as Display Fields and/or Filter Fields, in addition to filter Object. To Add one or more items to the configuration, click an item then use the right pointing arrow to move it to the Selected Section.
+
+Filter Fields and Filter Objects only apply when the configuration is applied to the FileViewer Component. 
+
+#### Field Values
+![fileviewer metadata configuration field values](images/fileviewer-configuration-field-values.png)
+
+In this section you can set predefined values that will be applied when the component this configuration is used for uploads a file. Select a tag from the drop down list and type the default value you want to set in the entry that appears to the right.
+
+#### Sharing and Visibility Options
+
+![fileviewer metadata configuration sharing and visibility options](images/fileviewer-configuration-sharing-visibility.png)
+
+Here you can set which sharing and visibility options the component will use. For more on these options please see the configuration section of the [File Tag Launcher](#file-tag-launcher).
+
+Once the Configuration settings are established click the save button on the top right of the Configuration header. 
+
+![fileviewer metadata configuration sharing and visibility options](images/fileviewer-configuration-saving.png)
+
+This will start to deploy the configuration. Once it is completed the status will change to the following.
+
+![fileviewer metadata configuration sharing and visibility options](images/fileviewer-configuration-saving-sucess.png)
+
+Once created reference the FileViewer Configuration Name in the components Configuration Name design element by choosing it from the picklist.
 
 ![fileviewer metadata configuration reference](images/fileviewer-metadata-setup2.png)
 
@@ -230,13 +257,23 @@ You will need to share the following apex classes with your Experience user prof
 
    1. All tags on the Content Document object
 
-1. This section will allow you to toggle various aspects of the FileViewer page
+1. This gear represents the FileViewer advanced settings. Clicking it will reveal the following menu.
 
-   1. This displays the number of records returned form the search.
+   ![FileViewer Tag Launcher](images/fileviewer-advanced-settings.png)
 
-   1. Clicking the magnifying will toggle the search section from visible (blue) to not visible (white)
+   1. Show Search Panel (On/Off) - This allows for a user to show and hide the search panel. By default the search panel is shown.
 
-   1. Clicking the stacked bars will toggle the results section from list view (blue) to tile view (white)
+   1. Change View (Tiles/List) - This allows for a user to toggle between seeing files as tiles or seeing files in a list.
+
+   1. Choose Fields (Show/Hide) -  This allows for a user to see a list of Displayed fields. It also allows users to modify their view to show specific tags they are interested in. Changing displayed fields does not affect FileViewers ability to filter on those fields. To reset displayed fields click the "i" icon shown below.
+
+      ![FileViewer Displayed Fields Reset](images/fileviewer-advanced-settings-reset.png)
+
+   1. Download Data - This button will download an Excel sheet for all displayed Files. The Excel sheet shows a list of all the file field values for those files.
+
+   1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
+
+   1. Download Files -  This button will download a zip file containing all the displayed files. 
 
 
 #### **File Tag Launcher Appendix**
