@@ -175,10 +175,28 @@ Each Component has a series of Design Options you can use to customize each Comp
 ### **Setting up a FileViewer Configuration**
 If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configuratior tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
 
+#### Configuration Naming
+
 ![fileviewer metadata configuration](images/fileviewer-metadata-setup1.png)
 
 To create a new Configuration click Add New Configuration on the top right of the app. Click the Configuration to expand it and see the settings. Always start off by giving your configuration a name and deciding if it should be active or inactive. 
 
+Use the following two Configuration naming conventions to set defaults for various locations in Salesforce:
+
+1. Object Name verbatim will set that configuration as the default configuration for any of that objects page layouts. Here are some examples:
+
+   Naming the Configuration Account will make that configuration the default when <NONE> is selected for the 2b. Configuration Name Design Element on an Account page.
+
+   If there was a custom object named Custom_Object__c, naming the Configuration Custom_Object__c configuration would do that same for the Custom_Object__C page.
+
+1. Object Name in all lower case will set that configuration as the default for the Experience Detail Page for that Object. Here are some examples:
+
+Naming the Configuration account will make that configuration the default when <NONE> is selected for the 2b. Configuration Name Design Element on an Account Detail page in the experience.
+
+If there was a custom object named Custom_Object__c, naming the Configuration custom_object__c configuration would do that same for the Custom_Object__C page.
+
+Regardless of the Configuration name you will see them in the 2b Configuration Name Drop down in the component design.
+   
 #### Field Options
 
 ![fileviewer metadata configuration field options](images/fileviewer-configuration-field-options.png)
@@ -225,6 +243,8 @@ You will need to share the following apex classes with your Experience user prof
 - firmworks.FileTaxonomyController
 
 - firmworks.ObjectFinderController
+
+- firmworks.FileViewerController
 
 ## **Component Appendix**
 
