@@ -179,7 +179,7 @@ If you want to use the same configuration for more than one use of the component
 
 ![fileviewer metadata configuration](images/fileviewer-metadata-setup1.png)
 
-To create a new Configuration click Add New Configuration on the top right of the app. Click the Configuration to expand it and see the settings. Always start off by giving your configuration a name and deciding if it should be active or inactive. 
+To create a new Configuration click Add New Configuration on the top right of the app. Click the Configuration to expand it and see the settings. Always start off by giving your configuration a name and deciding if it should be active or inactive.
 
 Use the following two Configuration naming conventions to set defaults for various locations in Salesforce:
 
@@ -196,14 +196,14 @@ Naming the Configuration account will make that configuration the default when <
 If there was a custom object named Custom_Object__c, naming the Configuration custom_object__c configuration would do that same for the Custom_Object__C page.
 
 Regardless of the Configuration name you will see them in the 2b Configuration Name Drop down in the component design.
-   
+
 #### Field Options
 
 ![fileviewer metadata configuration field options](images/fileviewer-configuration-field-options.png)
 
-In this section you can choose tags from teh Content Version you want to include as Display Fields and/or Filter Fields, in addition to filter Object. To Add one or more items to the configuration, click an item then use the right pointing arrow to move it to the Selected Section.
+In this section you can choose tags from the Content Version you want to include as Display Fields and/or Filter Fields, in addition to filter Object. To Add one or more items to the configuration, click an item then use the right pointing arrow to move it to the Selected Section.
 
-Filter Fields and Filter Objects only apply when the configuration is applied to the FileViewer Component. 
+Filter Fields and Filter Objects only apply when the configuration is applied to the FileViewer Component.
 
 #### Field Values
 ![fileviewer metadata configuration field values](images/fileviewer-configuration-field-values.png)
@@ -216,7 +216,7 @@ In this section you can set predefined values that will be applied when the comp
 
 Here you can set which sharing and visibility options the component will use. For more on these options please see the configuration section of the [File Tag Launcher](#file-tag-launcher).
 
-Once the Configuration settings are established click the save button on the top right of the Configuration header. 
+Once the Configuration settings are established click the save button on the top right of the Configuration header.
 
 ![fileviewer metadata configuration sharing and visibility options](images/fileviewer-configuration-saving.png)
 
@@ -293,7 +293,7 @@ You will need to share the following apex classes with your Experience user prof
 
    1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
 
-   1. Download Files -  This button will download a zip file containing all the displayed files. 
+   1. Download Files -  This button will download a zip file containing all the displayed files.
 
 
 #### **File Tag Launcher Appendix**
