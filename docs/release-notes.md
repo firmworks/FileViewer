@@ -3,6 +3,41 @@
 
 # FileViewer Release Notes
 
+## 0.13 - June 2022 Viva la digital document revolution
+
+### What's New
+
+- Content Viewer Control - Preview pdfs, documents, videos and audio directly in lightning layouts.
+- Content Viewer List - Quickly enable your users by dropping this control on a record layout to visually tab through all of the files related to a record.
+- File Report Result - Define a report to run and drop this result set anywhere to drive activities.
+- File Record Report - Define a report and drop this component on a record to visually tell your users whether the record is in compliance or not with the attached records.
+- Schedule Reports to run and subscribe to report platform events to drive the behaviors required of your organization.
+- New Persona unlocked - data entry, configure your content versions with a checkbox and enable users to work through a queue of documents, tagging and building usable libraries quickly and easily within one screen.
+
+### Enhanced File Previews
+
+- Integrate your files directly into your work flow, no more navigating away to view file contents.
+- View documents directly on record layouts
+- View supported audio and video files directly within the lightning page.
+- Enhanced File Previews directly integrated into the FileViewer search screen to allow for enhanced data entry, minimizing mistakes as users have direct context to the document being viewed.
+
+### Reporting
+
+- Enhanced experience of working with, editing and saving reports
+- New Reporting control - Configure a report for your users and deploy it into lightning pages
+- New Reporting control - Configure a report and drop a record report on a layout to let your users know if the record has the appropriate documents related or not.
+- Schedule reports to run regularly that publish platform events allowing your implementors to create tasks, objects, drive activities and flows to close the gap in your document lifecycle.
+
+### Enhancements
+
+#### File Search
+
+- List view is now editable to assist users in data entry directly in the file search.
+
+#### Reports
+
+- Now scheduable and actionable
+
 ## 0.11 - February 2022
 
 ### New Features
