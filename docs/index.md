@@ -14,5 +14,6 @@ FileViewer is a native salesforce application designed to make the storing, retr
 https://getfirmworks.com
 
 support@getfirmworks.com
+[Engaging Support](support-support.md)
 
 [Salesforce AppExchange Listing](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3u00000PGu9TEAT)
