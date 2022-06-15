@@ -12,17 +12,14 @@
 
 Why would FirmWorks Support need access to my Organization?
 
-FirmWorks Support may ask you to Grant Login Access in order to assist you with a question, issue, or request.
+    FirmWorks Support may ask you to Grant Login Access in order to assist you with a question, issue, or request.
 
-This is so that Support can log in to the application using your login to troubleshoot and fix issues stemming from your inquiry.
+    This is so that Support can log in to the application using your login to troubleshoot and fix issues stemming from your inquiry.
 
-No one within FirmWorks Support may log in to your Org to resolve issues without this explicit permission and duration for the access.
-
-
-## Directions
+    No one within FirmWorks Support may log in to your Org to resolve issues without this explicit permission and duration for the access.
 
 
-How to Grant Login Access to FirmWorks
+## How to Grant Login Access to FirmWorks
 
 Salesforce Lightning
 
