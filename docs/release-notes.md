@@ -3,7 +3,7 @@
 
 # FileViewer Release Notes
 
-## 0.13 - June 2022 Viva la digital document revolution
+## 0.14 - June 2022
 
 ### What's New
 
