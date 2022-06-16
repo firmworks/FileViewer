@@ -3,7 +3,15 @@
 
 # FileViewer Release Notes
 
+## 0.15 - June 2022
+
+Stability update
+
 ## 0.14 - June 2022
+
+Stability update
+
+## 0.13 - June 2022
 
 ### What's New
 
