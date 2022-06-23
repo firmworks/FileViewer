@@ -48,13 +48,75 @@ Here is an example record build on the Account with custom tags added:
 
 ### Configuring a Record Page Layout
 
-You can add any of the following components to a page layout
+You can add any of the following components to a page layout. Each Component has a series of Design Options you can use to customize each Component. To see the design layout use the [Component Appendix](#Component Appendix).
 
-![FileViewer Record Page Setup](images/fileviewer-record-page-setup1.png)
+#### **Content Viewer**
+![FileViewer Configure Content Viewer](images/fileviewer-configure-content-viewer.png)
 
-Each Component has a series of Design Options you can use to customize each Component. To see the design layout use the [Component Appendix](#Component Appendix).
+1. Configuration: 
 
-#### File Tag Launcher
+   1. Content Version Id - Set a Salesforce Content Version Id here to show it in the Component. To get the Content Version Id, please use the following SOQL in Workbench or Developer Console:
+
+> SELECT Id FROM ContentVersion WHERE ContentDocumentId = '<***Insert The Salesforce File Id you want to show in the component here***>'
+
+#### **File Report Results**
+![FileViewer Configure File Report Results](images/fileviewer-configure-file-report-results.png)
+
+1. Appearance:
+
+   1. Title - This will set the title in the top left of the component on the page layout.
+
+   1. Max Height - This will set the max height on the component on the page layout. If this is not set the height will be set based on the number of returned results.
+
+1. Configuration:
+
+   1. Report Name - This is a pick list of all the File Reports on the org for an admin to choose from. To create a new report please review the [File Reporting](file-reporting.md) section of the documentation.
+
+1. Behavior:
+
+   1. Auto Run On Load - When this option is checked the report will run when the page loads. This could cause slow downs if the report returns a large amount of records. When this is not checked a user will need to click the reload report icon on the top right of the component to see results.
+
+
+#### **File Report Runner for Records**
+![FileViewer Configure File Report Runner for Records](images/fileviewer-configure-file-report-runner-for-records.png)
+
+1. Appearance:
+
+   1. Title - This will set the title in the top of the component on the page layout.
+   1. Background Color - This will allow you to change th3 color of the component's background to better match your branding or make messages more legible.
+
+1. Configuration:
+
+   1. Record Id - This is used in Experience to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
+   1. Report Name - This is a pick list of all the File Reports on the org for an admin to choose from. To create a new report please review the [File Reporting](file-reporting.md) section of the documentation.
+
+1. Behavior:
+
+   1. Report Has Results Status - This is a list of display options to let the configurator decide how the Icon should look when a record is found in the report associated in the Report Name.
+   1. Report Without Results Status - This is a list of display options to let the configurator decide how the Icon should look when a record is NOT found in the report associated in the Report Name.
+   1. Report Has Results Message - This is a Text field to let the configurator decide how the message should look when a record is found in the report associated in the Report Name. This also also allows for Rich Text, so a configurator can use links, images, and to guide users on how to make the records compliant. 
+   1. Report Without Results Message - This is a Text field to let the configurator decide how the message should look when a record is NOT found in the report associated in the Report Name. This also also allows for Rich Text, so a configurator can use links, images, and to guide users on how to make the records compliant.
+   1. Display Results Documents - If this is checked it will show a button to allow the user to see the documents that were uploaded that allowed the record to be included in the report. If it is not checked it will not show the button. 
+   1. No Action Message - This is a Text field to let the configurator decide how the message should look when a record is not part of the object filter criteria for the report associated in Report Name.
+
+   An example of how this component works in practice:
+   ![FileViewer Configure File Report Runner for Records Use](images/fileviewer-configuration-file-report-runner-for-records.gif)
+
+   Some examples of how rich text can be used in the Message configuration fields:
+   ![FileViewer Configure File Report Runner for Records Rich Text](images/fileviewer-configure-file-report-runner-for-records-rich-text.png)
+
+   Some Rich Text Examples: <br>
+    `<a href="www.google.com">Here is a Hyperlink</a> <br>`
+
+   Here is an image: <br>
+   `<img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg" alt="Girl in a jacket"> <br>`
+
+   Here is a Video: <br>
+   `<iframe width="560" height="315" src="https://www.youtube.com/embed/EO1Z-sNx_bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+
+#### **File Tag Launcher**
+![FileViewer Configure File Tag Launcher](images/fileviewer-configure-file-tag-launcher.png)
 
 1. Setup:
 
@@ -102,7 +164,7 @@ Each Component has a series of Design Options you can use to customize each Comp
 
          1. InternalUsers – Defaults the toggle to Default
 
-#### **File Tagger**
+<!--#### **File Tagger**
 
 1. Setup:
 
@@ -134,9 +196,10 @@ Each Component has a series of Design Options you can use to customize each Comp
 
       1. AllUsers – Defaults the toggle to All Users
 
-      1. InternalUsers – Defaults the toggle to Default
+      1. InternalUsers – Defaults the toggle to Default-->
 
 #### **FileViewer**
+![FileViewer Configure FileViewer](images/fileviewer-configure-file-viewer.png)
 
 1. Appearance:
 
@@ -172,8 +235,20 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Cache Id – If you want the behavior to be different between instances of the file's viewer. Use this variable to a unique variable or name to reference the way you have the component set up in each place. If you have the component set up on the account a very specific, you want to use for every object, use the cache id to not have to setup all the settings again.
 
+#### **Record Content Viewer**
+![FileViewer Configure Record Content Viewer](images/fileviewer-configure-record-content-viewer.png)
+
+1. Configuration:
+
+   1. Record Id - This is used in Experience to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
+
+1. Appearance:
+
+   1. Max Height - This will set the max height on the component on the page layout. If this is not set the height will be set based on the number of returned results.
+
+
 ### **Setting up a FileViewer Configuration**
-If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configuratior tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
+If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configurator tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
 
 #### Configuration Naming
 
@@ -246,6 +321,10 @@ You will need to share the following apex classes with your Experience user prof
 
 - firmworks.FileViewerController
 
+- firmworks.ContentViewerController
+
+- firmworks.RecordReportController
+
 ## **Component Appendix**
 
 #### **FileViewer Appendix**
@@ -289,12 +368,15 @@ You will need to share the following apex classes with your Experience user prof
 
       ![FileViewer Displayed Fields Reset](images/fileviewer-advanced-settings-reset.png)
 
+1. The Lightning bolt represents the actions you cna take from the FileViewer Component
+
+   ![FileViewer Actions](images/fileviewer-advanced-settings-actions.png)
+
    1. Download Data - This button will download an Excel sheet for all displayed Files. The Excel sheet shows a list of all the file field values for those files.
 
    1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
 
    1. Download Files -  This button will download a zip file containing all the displayed files.
-
 
 #### **File Tag Launcher Appendix**
 

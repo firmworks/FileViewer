@@ -53,19 +53,17 @@ Editor.
 
 ![](./quickStartImages/image5.png)
 
-**FileViewer** is the Lightning Record Page Component that provides
-searching, File Tagging, File Downloading, and more directly on a
-record. *This component does not include an upload button, so it is used
-in conjunction with either File Tagger or File Tag Launcher.*
+**Content Viewer** is a Lightning Component that can be passed a Content Version Id to allow anyone to view that file on any page that allows Lightning Components in Salesforce.
 
-**File Tagger** is the Lightning Record Page Component that provides
-tagging, uploading, and visibility configurations directly on the record
-page layout.
+**File Report Results** is the Lightning Component that can be used to show File Viewer Report result on any page that allows Lightning Components in Salesforce.
 
-**File Tag Launcher** is the Lightning Record Page Component that
-provides a Tag & Upload customizable button on records. This button is
-an alternative to the File Tagger component. The button launches a
-pop-up screen with tagging, uploading, and visibility configurations.
+**File Report Runner for Records** is a Lightning Component that can be used to sho2 if a record is in compliance based on being a result of a File Viewer Report on any page that allows Lightning Components in Salesforce.
+
+**FileViewer** is the Lightning Record Page Component that provides searching, File Tagging, File Downloading, and more directly on a record. *This component does not include an upload button, so it is used in conjunction with either File Tagger or File Tag Launcher.*
+
+**File Tag Launcher** is the Lightning Record Page Component that provides a Tag & Upload customizable button on records. This button is an alternative to the File Tagger component. The button launches a pop-up screen with tagging, uploading, and visibility configurations.
+
+**Record Content Viewer** is a Lightning Component that will show a visual for each file on a record in a tabbed form on any record page in Salesforce.
 
 To add any of these components, drag and drop the desired component into
 the target region of the Lightning Record Page and Save.
