@@ -51,7 +51,7 @@ Here is an example record build on the Account with custom tags added:
 
 ### Configuring a Record Page Layout
 
-You can add any of the following components to a page layout. Each Component has a series of Design Options you can use to customize each Component. To see the design layout use the [Component Appendix](#Component Appendix).
+You can add any of the following components to a page layout. Each Component has a series of Design Options you can use to customize each them. To see the design layout use the [Component Appendix](#Component Appendix).
 
 #### **Content Viewer**
 ![FileViewer Configure Content Viewer](images/fileviewer-configure-content-viewer.png)
@@ -69,7 +69,7 @@ You can add any of the following components to a page layout. Each Component has
 
    1. Title - This will set the title in the top left of the component on the page layout.
 
-   1. Max Height - This will set the max height on the component on the page layout. If this is not set the height will be set based on the number of returned results.
+   1. Max Height - This will set the max height on the component in the page layout. If this is not set the height will be set based on the number of returned results.
 
 1. Configuration:
 
@@ -90,7 +90,7 @@ You can add any of the following components to a page layout. Each Component has
 
 1. Configuration:
 
-   1. Record Id - This is used in Experience to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
+   1. Record Id - This is used in Experience Cloud (formerly Communities) to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
    1. Report Name - This is a pick list of all the File Reports on the org for an admin to choose from. To create a new report please review the [File Reporting](file-reporting.md) section of the documentation.
 
 1. Behavior:
@@ -346,7 +346,7 @@ You will need to share the following apex classes with your Experience user prof
 
       ![FileViewer Displayed Fields Reset](images/fileviewer-advanced-settings-reset.png)
 
-1. The Lightning bolt represents the actions you cna take from the FileViewer Component
+1. The lightning bolt represents the actions you can take from the FileViewer Component
 
    ![FileViewer Actions](images/fileviewer-advanced-settings-actions.png)
 
@@ -359,7 +359,7 @@ You will need to share the following apex classes with your Experience user prof
 
 #### Search Section
 
-The topmost bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
+The top most bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
 
    1. Each tag is shown in the search section filter documents. Check the boxes for the tags you want to filter on the click Apply.
 
@@ -382,7 +382,7 @@ The topmost bar will allow you to search any of the object allowed to be search 
 
    1. Preview of the Document - You can click this thumbnail to access the Salesforce modal preview of the file.
 
-   1. All tags on the Content Document object - You can click the pencil new to a Tab to edit them in the preview tile.
+   1. All tags on the Content Document object - You can click the pencil next to a Tag to edit them in the preview tile.
 
 
 #### List View
