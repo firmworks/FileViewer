@@ -7,9 +7,12 @@
    - [Assigning the Default Tab to Apps](#assigning-the-default-tab-to-apps)
    - [Creating a new FileViewer Tab](#creating-a-new-fileviewer-tab)
    - [Configuring a Record Page Layout](#configuring-a-record-page-layout)
-      - [File Tag Launcher](#file-tag-launcher)
+      - [Content Viewer](#content-viewer)
+      - [File Report Results](#file-report-results)
+      - [File Report Runner for Records](#file-report-runner-for-records)
       - [File Tagger](#file-tagger)
       - [FileViewer](#fileviewer)
+      - [Record Content Viewer](#record-content-viewer)
    - [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-fileviewer-configuration-metadata-record)
    - [Configuration for Experience Page](#configuration-for-experience-page)
 - [Component Appendix](#component-appendix)
@@ -327,34 +330,9 @@ You will need to share the following apex classes with your Experience user prof
 
 ## **Component Appendix**
 
-#### **FileViewer Appendix**
+### **FileViewer Appendix**
 
-![FileViewer Component](images/fileviewer_component_overview.png)
-
-1. Search Section: The topmost bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
-
-   1. Each tag is shown in the search section filter documents. Check the boxes for the tags you want to filter on the click Apply.
-
-   1. Clicking the + button below the ‘Within The Following Date Ranges:’ section will result in a date filter section being added.
-   ![Date Range Filter1](images/date_range_filter1.png)
-
-   1. This allows you to use the date fields on the Content Version to filter. If you choose Custom range, you will be given a date picker UI to choose the dates.
-
-      ![Date Range Filter2](images/date_range_filter2.png)
-
-      This can be added multiple times. Once you add dates to filter on click the Apply button.
-
-   1. Sort By will allow you to sort the searched files by the chosen field
-
-   1. Max results limits the number of results per page by the chosen number
-
-1. Results Section: This is the files returned by your search results. Each tile is set up the same way. Clicking one of the edit panels will allow the user to edit the file.
-
-   1. Preview of the Document
-
-   1. Title of the document
-
-   1. All tags on the Content Document object
+#### Actions and Settings
 
 1. This gear represents the FileViewer advanced settings. Clicking it will reveal the following menu.
 
@@ -377,6 +355,59 @@ You will need to share the following apex classes with your Experience user prof
    1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
 
    1. Download Files -  This button will download a zip file containing all the displayed files.
+
+
+#### Search Section
+
+The topmost bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
+
+   1. Each tag is shown in the search section filter documents. Check the boxes for the tags you want to filter on the click Apply.
+
+   1. Clicking the + button below the ‘Within The Following Date Ranges:’ section will result in a date filter section being added.
+   ![Date Range Filter1](images/date_range_filter1.png)
+
+   1. This allows you to use the date fields on the Content Version to filter. If you choose Custom range, you will be given a date picker UI to choose the dates.
+
+      ![Date Range Filter2](images/date_range_filter2.png)
+
+      This can be added multiple times. Once you add dates to filter on click the Apply button.
+
+   1. Sort By will allow you to sort the searched files by the chosen field
+
+   1. Max results limits the number of results per page by the chosen number
+
+#### Tile View
+
+1. Results Section: This is the files returned by your search results. Each tile is set up the same way. Clicking one of the edit panels will allow the user to edit the file.
+
+   1. Preview of the Document - You can click this thumbnail to access the Salesforce modal preview of the file.
+
+   1. All tags on the Content Document object - You can click the pencil new to a Tab to edit them in the preview tile.
+
+
+#### List View
+
+![FileViewer Tag Launcher](images/fileviewer-advanced-settings-list-view-ui.png)
+
+1. Results Section: This is the files returned by your search results. Each row is set up the same way. Clicking the eye icon on the left of a row to Show the file on the right.
+
+   1. List Options: 
+
+      1. Use slider to change width of the scalable image -  This will adjust the width of the scalable image tab in the document preview when the eye icon is clicked on the left hand side of a row.
+
+      1. Use slider to change height of the scalable image - This will adjust the height of the scalable image tab in the document preview when the eye icon is clicked on the left hand side of a row.
+
+      1. Scroll Grid - This toggle will allow the columns to adjust to the length of the field and add a scroll bar to the bottom of the List View to allow a user to scroll through the grid.
+
+   1. Preview of the Document (on the right) - The Document preview has three tabs:
+      
+      1. Scalable Image - This is a view of the selected rows file. The width and height are set using the sliders in the List Options section.
+
+      1. Image - This is a thumbnail of the file that can be click to show the standard Salesforce preview.
+
+      1. Record Details - This tab can be use to see the Tags in the same way as the tile view.
+
+   1. Live View Columns -  These columns are fully editable for each row. They have validation for specific field types and more.
 
 #### **File Tag Launcher Appendix**
 

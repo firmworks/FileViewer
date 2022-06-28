@@ -7,7 +7,7 @@
 
 All System Administrator based profiles can see the File Report tab after installation. To allow other users to see the tab you will need to assign them the **FileViewer Reporting** permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
 
-## Using Quick Reports
+## Using Select Reports
 
 Start off by clicking the Show Quick Reports toggle to see some out of box reports based on standard Sales Cloud objects (Accounts, Contacts, and Opportunities). 
 
