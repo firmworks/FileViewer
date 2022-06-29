@@ -407,7 +407,7 @@ The top most bar will allow you to search any of the object allowed to be search
 
       1. Record Details - This tab can be use to see the Tags in the same way as the tile view.
 
-   1. Live View Columns -  These columns are fully editable for each row. They have validation for specific field types and more.
+   1. Live View Columns -  These columns are fully editable for each row by clicking a pencil in the column. To delete all edits click the red pencil on the left of the row next to the eye icon. Each Row will have validation for specific field types setup on the Salesforce Object.
 
 #### **File Tag Launcher Appendix**
 
