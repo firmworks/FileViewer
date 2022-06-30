@@ -65,6 +65,8 @@ The buttons in Step 3 will allow you to change the returned record set.
 - **View Details** - This button will open a new window to that rows Selected Objects Salesforce Record.
 
 ## Scheduling Reports 
+
+### Basic Scheduling
 Scheduling reports will allow a report to be run regularly and post platform event/ To learn more about which Salesforce technology can subscribe to platform events please see the following Salesforce Article, https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_subscribe.htm.
 
 To start click the Schedule Reports button to access the scheduling UI. This UI will open the scheduling UI for the current report but will also allow you to set Schedules for all the save reports in the org.
@@ -75,12 +77,48 @@ To start click the Schedule Reports button to access the scheduling UI. This UI 
 - Days: This is a multi-select list aht lets you pick one or more days for the schedule to run on.
 - Start At: This is the time the schedule should run at the frequency and days your chose previously.
 
-At this point you can click Create Schedule to generate a scheduled job for the report with the setting you choose.
+At this point you can click Create Schedule to generate a scheduled job for the report with the setting you choose. You can generate more than one scheduled job for a report if needed.
 
-- Advanced: clikc advanced 
+### Advanced Scheduling
+
+The Advanced button in the scheduling UI allows a user to input their own cron expression or have the choices build one. Once the advanced button is set the cron expression is no longer going to affect the choices (they are greyed out to indicate this)
+
+![FileViewer File Report Scheduling](images/fileviewer-reporting-scheduling2.png)
 
 ## Using Flows to Automate Action From on Scheduled Reports.
 
+Scheduling a File Report results in a Platform event being published for each returned from the report. You can subscribe to these event by using a Platform event triggered flow. To setup a Platform Event Triggered Flow use the Salesforce documentation here https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_subscribe_flow.htm. When asked which platform event you
+want to choose select File Report Event as seen below. 
+
+![FileViewer File Report Scheduling with Flow](images/fileviewer-reporting-scheduling-flow1.png)
+
+The File Report Event allows access to teh follow information fo use with the flow:
+
+![FileViewer File Report Scheduling with Flow](images/fileviewer-reporting-scheduling-flow2.png)
+
+- Event Type: This value is currently set to "Report" to indicate where the vent was sourced from. It may be updated with new values in teh future.
+
+- Message: This Field will be populate with any system error messages that happen 
+
+- Number of Documents: This is the Number of Document associated with the record that was returned from the report for this Platform event. If the report is set up to return records without documents this will be 0.
+
+- Report: The Id of the Metadata record associated with the report that created the Platform event.
+
+- Report Details: The Description field from the Metadata record associated with the report that created the Platform event.
+
+- Report Name:The name (Custom-<scheduled Job Id>) of the Scheduled Job Associated with Report Schedule. 
+
+- Source Id(s): The Id of the record returned from the report that created the platform event.
+
+- Status: Blank unless there is an issue. 
+
+These files are available from teh REcord object when using the elements in a flow. Generally, using the Source Id(s) field to get records to update is a good way to go. Some use cases are:
+
+- Updating a field on a record when a document exists or does not exist.
+
+- Creating a Task or Chatter on the Source Id(s) record to alert the owner action is needed.
+
+Alternatively you can also use the [FIle Report Runner for Records](#file-report-runner-for-records)
 
 ## Creating Custom Reports
 
