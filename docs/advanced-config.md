@@ -7,9 +7,12 @@
    - [Assigning the Default Tab to Apps](#assigning-the-default-tab-to-apps)
    - [Creating a new FileViewer Tab](#creating-a-new-fileviewer-tab)
    - [Configuring a Record Page Layout](#configuring-a-record-page-layout)
-      - [File Tag Launcher](#file-tag-launcher)
+      - [Content Viewer](#content-viewer)
+      - [File Report Results](#file-report-results)
+      - [File Report Runner for Records](#file-report-runner-for-records)
       - [File Tagger](#file-tagger)
       - [FileViewer](#fileviewer)
+      - [Record Content Viewer](#record-content-viewer)
    - [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-fileviewer-configuration-metadata-record)
    - [Configuration for Experience Page](#configuration-for-experience-page)
 - [Component Appendix](#component-appendix)
@@ -48,13 +51,75 @@ Here is an example record build on the Account with custom tags added:
 
 ### Configuring a Record Page Layout
 
-You can add any of the following components to a page layout
+You can add any of the following components to a page layout. Each Component has a series of Design Options you can use to customize each them. To see the design layout use the [Component Appendix](#Component Appendix).
 
-![FileViewer Record Page Setup](images/fileviewer-record-page-setup1.png)
+#### **Content Viewer**
+![FileViewer Configure Content Viewer](images/fileviewer-configure-content-viewer.png)
 
-Each Component has a series of Design Options you can use to customize each Component. To see the design layout use the [Component Appendix](#Component Appendix).
+1. Configuration: 
 
-#### File Tag Launcher
+   1. Content Version Id - Set a Salesforce Content Version Id here to show it in the Component. To get the Content Version Id, please use the following SOQL in Workbench or Developer Console:
+
+> SELECT Id FROM ContentVersion WHERE ContentDocumentId = '<***Insert The Salesforce File Id you want to show in the component here***>'
+
+#### **File Report Results**
+![FileViewer Configure File Report Results](images/fileviewer-configure-file-report-results.png)
+
+1. Appearance:
+
+   1. Title - This will set the title in the top left of the component on the page layout.
+
+   1. Max Height - This will set the max height on the component in the page layout. If this is not set the height will be set based on the number of returned results.
+
+1. Configuration:
+
+   1. Report Name - This is a pick list of all the File Reports on the org for an admin to choose from. To create a new report please review the [File Reporting](file-reporting.md) section of the documentation.
+
+1. Behavior:
+
+   1. Auto Run On Load - When this option is checked the report will run when the page loads. This could cause slow downs if the report returns a large amount of records. When this is not checked a user will need to click the reload report icon on the top right of the component to see results.
+
+
+#### **File Report Runner for Records**
+![FileViewer Configure File Report Runner for Records](images/fileviewer-configure-file-report-runner-for-records.png)
+
+1. Appearance:
+
+   1. Title - This will set the title in the top of the component on the page layout.
+   1. Background Color - This will allow you to change th3 color of the component's background to better match your branding or make messages more legible.
+
+1. Configuration:
+
+   1. Record Id - This is used in Experience Cloud (formerly Communities) to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
+   1. Report Name - This is a pick list of all the File Reports on the org for an admin to choose from. To create a new report please review the [File Reporting](file-reporting.md) section of the documentation.
+
+1. Behavior:
+
+   1. Report Has Results Status - This is a list of display options to let the configurator decide how the Icon should look when a record is found in the report associated in the Report Name.
+   1. Report Without Results Status - This is a list of display options to let the configurator decide how the Icon should look when a record is NOT found in the report associated in the Report Name.
+   1. Report Has Results Message - This is a Text field to let the configurator decide how the message should look when a record is found in the report associated in the Report Name. This also also allows for Rich Text, so a configurator can use links, images, and to guide users on how to make the records compliant. 
+   1. Report Without Results Message - This is a Text field to let the configurator decide how the message should look when a record is NOT found in the report associated in the Report Name. This also also allows for Rich Text, so a configurator can use links, images, and to guide users on how to make the records compliant.
+   1. Display Results Documents - If this is checked it will show a button to allow the user to see the documents that were uploaded that allowed the record to be included in the report. If it is not checked it will not show the button. 
+   1. No Action Message - This is a Text field to let the configurator decide how the message should look when a record is not part of the object filter criteria for the report associated in Report Name.
+
+   An example of how this component works in practice:
+   ![FileViewer Configure File Report Runner for Records Use](images/fileviewer-configuration-file-report-runner-for-records.gif)
+
+   Some examples of how rich text can be used in the Message configuration fields:
+   ![FileViewer Configure File Report Runner for Records Rich Text](images/fileviewer-configure-file-report-runner-for-records-rich-text.png)
+
+   Some Rich Text Examples: <br>
+    `<a href="www.google.com">Here is a Hyperlink</a> <br>`
+
+   Here is an image: <br>
+   `<img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Small_pie.svg" alt="Girl in a jacket"> <br>`
+
+   Here is a Video: <br>
+   `<iframe width="560" height="315" src="https://www.youtube.com/embed/EO1Z-sNx_bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+
+#### **File Tag Launcher**
+![FileViewer Configure File Tag Launcher](images/fileviewer-configure-file-tag-launcher.png)
 
 1. Setup:
 
@@ -102,7 +167,7 @@ Each Component has a series of Design Options you can use to customize each Comp
 
          1. InternalUsers – Defaults the toggle to Default
 
-#### **File Tagger**
+<!--#### **File Tagger**
 
 1. Setup:
 
@@ -134,9 +199,10 @@ Each Component has a series of Design Options you can use to customize each Comp
 
       1. AllUsers – Defaults the toggle to All Users
 
-      1. InternalUsers – Defaults the toggle to Default
+      1. InternalUsers – Defaults the toggle to Default-->
 
 #### **FileViewer**
+![FileViewer Configure FileViewer](images/fileviewer-configure-file-viewer.png)
 
 1. Appearance:
 
@@ -172,8 +238,20 @@ Each Component has a series of Design Options you can use to customize each Comp
 
    1. Cache Id – If you want the behavior to be different between instances of the file's viewer. Use this variable to a unique variable or name to reference the way you have the component set up in each place. If you have the component set up on the account a very specific, you want to use for every object, use the cache id to not have to setup all the settings again.
 
+#### **Record Content Viewer**
+![FileViewer Configure Record Content Viewer](images/fileviewer-configure-record-content-viewer.png)
+
+1. Configuration:
+
+   1. Record Id - This is used in Experience to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
+
+1. Appearance:
+
+   1. Max Height - This will set the max height on the component on the page layout. If this is not set the height will be set based on the number of returned results.
+
+
 ### **Setting up a FileViewer Configuration**
-If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configuratior tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
+If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configurator tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
 
 #### Configuration Naming
 
@@ -246,13 +324,42 @@ You will need to share the following apex classes with your Experience user prof
 
 - firmworks.FileViewerController
 
+- firmworks.ContentViewerController
+
+- firmworks.RecordReportController
+
 ## **Component Appendix**
 
-#### **FileViewer Appendix**
+### **FileViewer Appendix**
 
-![FileViewer Component](images/fileviewer_component_overview.png)
+#### Actions and Settings
 
-1. Search Section: The topmost bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
+1. This gear represents the FileViewer advanced settings. Clicking it will reveal the following menu.
+
+   ![FileViewer Tag Launcher](images/fileviewer-advanced-settings.png)
+
+   1. Show Search Panel (On/Off) - This allows for a user to show and hide the search panel. By default the search panel is shown.
+
+   1. Change View (Tiles/List) - This allows for a user to toggle between seeing files as tiles or seeing files in a list.
+
+   1. Choose Fields (Show/Hide) -  This allows for a user to see a list of Displayed fields. It also allows users to modify their view to show specific tags they are interested in. Changing displayed fields does not affect FileViewers ability to filter on those fields. To reset displayed fields click the "i" icon shown below.
+
+      ![FileViewer Displayed Fields Reset](images/fileviewer-advanced-settings-reset.png)
+
+1. The lightning bolt represents the actions you can take from the FileViewer Component
+
+   ![FileViewer Actions](images/fileviewer-advanced-settings-actions.png)
+
+   1. Download Data - This button will download an Excel sheet for all displayed Files. The Excel sheet shows a list of all the file field values for those files.
+
+   1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
+
+   1. Download Files -  This button will download a zip file containing all the displayed files.
+
+
+#### Search Section
+
+The top most bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
 
    1. Each tag is shown in the search section filter documents. Check the boxes for the tags you want to filter on the click Apply.
 
@@ -269,32 +376,38 @@ You will need to share the following apex classes with your Experience user prof
 
    1. Max results limits the number of results per page by the chosen number
 
+#### Tile View
+
 1. Results Section: This is the files returned by your search results. Each tile is set up the same way. Clicking one of the edit panels will allow the user to edit the file.
 
-   1. Preview of the Document
+   1. Preview of the Document - You can click this thumbnail to access the Salesforce modal preview of the file.
 
-   1. Title of the document
+   1. All tags on the Content Document object - You can click the pencil next to a Tag to edit them in the preview tile.
 
-   1. All tags on the Content Document object
 
-1. This gear represents the FileViewer advanced settings. Clicking it will reveal the following menu.
+#### List View
 
-   ![FileViewer Tag Launcher](images/fileviewer-advanced-settings.png)
+![FileViewer Tag Launcher](images/fileviewer-advanced-settings-list-view-ui.png)
 
-   1. Show Search Panel (On/Off) - This allows for a user to show and hide the search panel. By default the search panel is shown.
+1. Results Section: This is the files returned by your search results. Each row is set up the same way. Clicking the eye icon on the left of a row to Show the file on the right.
 
-   1. Change View (Tiles/List) - This allows for a user to toggle between seeing files as tiles or seeing files in a list.
+   1. List Options: 
 
-   1. Choose Fields (Show/Hide) -  This allows for a user to see a list of Displayed fields. It also allows users to modify their view to show specific tags they are interested in. Changing displayed fields does not affect FileViewers ability to filter on those fields. To reset displayed fields click the "i" icon shown below.
+      1. Use slider to change width of the scalable image -  This will adjust the width of the scalable image tab in the document preview when the eye icon is clicked on the left hand side of a row.
 
-      ![FileViewer Displayed Fields Reset](images/fileviewer-advanced-settings-reset.png)
+      1. Use slider to change height of the scalable image - This will adjust the height of the scalable image tab in the document preview when the eye icon is clicked on the left hand side of a row.
 
-   1. Download Data - This button will download an Excel sheet for all displayed Files. The Excel sheet shows a list of all the file field values for those files.
+      1. Scroll Grid - This toggle will allow the columns to adjust to the length of the field and add a scroll bar to the bottom of the List View to allow a user to scroll through the grid.
 
-   1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
+   1. Preview of the Document (on the right) - The Document preview has three tabs:
+      
+      1. Scalable Image - This is a view of the selected rows file. The width and height are set using the sliders in the List Options section.
 
-   1. Download Files -  This button will download a zip file containing all the displayed files.
+      1. Image - This is a thumbnail of the file that can be click to show the standard Salesforce preview.
 
+      1. Record Details - This tab can be use to see the Tags in the same way as the tile view.
+
+   1. Live View Columns -  These columns are fully editable for each row by clicking a pencil in the column. To delete all edits click the red pencil on the left of the row next to the eye icon. Each Row will have validation for specific field types setup on the Salesforce Object.
 
 #### **File Tag Launcher Appendix**
 

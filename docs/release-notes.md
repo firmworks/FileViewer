@@ -3,11 +3,14 @@
 
 # FileViewer Release Notes
 
-## 0.15 - June 2022
 
-Stability update
+## 0.18 - June 2022
 
-## 0.14 - June 2022
+### What's New
+
+- Paging Data
+
+## 0.14 - 0.17 - June 2022
 
 Stability update
 
@@ -17,12 +20,12 @@ Stability update
 
 - Content Viewer Control - Preview pdfs, documents, videos and audio directly in lightning layouts.
 - Content Viewer List - Quickly enable your users by dropping this control on a record layout to visually tab through all of the files related to a record.
-- File Report Result - Define a report to run and drop this result set anywhere to drive activities.
-- File Record Report - Define a report and drop this component on a record to visually tell your users whether the record is in compliance or not with the attached records.
-- Schedule Reports to run and subscribe to report platform events to drive the behaviors required of your organization.
-- New Persona unlocked - data entry, configure your content versions with a checkbox and enable users to work through a queue of documents, tagging and building usable libraries quickly and easily within one screen.
+- File Report Result - Define a File Viewer Report to run and drop this result set anywhere to drive activities.
+- File Record Report - Define a File Viewer Report and drop this component on a record to visually tell your users whether the record is in compliance or not with the attached records.
+- Schedule Reports to run which generate File Viewer Report platform events to drive the behaviors required of your organization. Create Tasks, Chatter User and more!
+- New Persona Support - data entry, configure your content versions to enable users to work through a queue of documents, tagging and building usable libraries quickly and easily within one screen.
 
-### Enhanced File Previews
+### Enhanced File Previews Using Content Viewer Components
 
 - Integrate your files directly into your work flow, no more navigating away to view file contents.
 - View documents directly on record layouts
@@ -31,7 +34,7 @@ Stability update
 
 ### Reporting
 
-- Enhanced experience of working with, editing and saving reports
+- Enhanced experience of working with, editing and saving reports.
 - New Reporting control - Configure a report for your users and deploy it into lightning pages
 - New Reporting control - Configure a report and drop a record report on a layout to let your users know if the record has the appropriate documents related or not.
 - Schedule reports to run regularly that publish platform events allowing your implementors to create tasks, objects, drive activities and flows to close the gap in your document lifecycle.
@@ -41,11 +44,20 @@ Stability update
 #### File Search
 
 - List view is now editable to assist users in data entry directly in the file search.
+- List View supports side by side content viewing to facilitate easier data entry from a document into Salesforce.
 
 #### Reports
 
-- Now scheduable and actionable
+- Reports can be scheduled to run to produce platform event to drive business process
+- hook into reports using a automation to provide you users insight into data that is out of compliance.
 
+### Bug Fixes
+
+- You will no longer see the follow error when editing a page with a File Viewer Component:
+
+![FileViewer 11 Configuration Name Error](images/fileviewer-11-configuration-name-error.png)
+
+--------------------------------------------------
 ## 0.11 - February 2022
 
 ### New Features
@@ -80,5 +92,3 @@ Stability update
     - Set display fields, filter fields, and filter on specific objects for all components.
     - Establish default values for tags using the field value section.
     - Maintain unified security and visibility settings over multiple components.
-
-## 0.10 - Initial release

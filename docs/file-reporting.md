@@ -7,13 +7,13 @@
 
 All System Administrator based profiles can see the File Report tab after installation. To allow other users to see the tab you will need to assign them the **FileViewer Reporting** permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
 
-## Using Quick Reports
+## Using Select Reports
 
-Start off by clicking the Show Quick Reports toggle to see some out of box reports based on standard Sales Cloud objects (Accounts, Contacts, and Opportunities). 
+Start off by clicking the Select Reports button to see some out of box reports based on standard Sales Cloud objects (Accounts, Contacts, and Opportunities). 
 
 ![FileViewer Report Quick Reports](images/fileviewer-reporting-quick-reports1.png)
 
-Once the Quick Reports UI is open click the eye icon to the left of a report to fill in the criteria in the sections below.
+Once the Reports UI is open click the load icon to the left of a report to fill in the criteria in the sections below.
 
 ![FileViewer Report Quick Report Filters](images/fileviewer-reporting-quick-reports2.png)
 
@@ -24,9 +24,11 @@ Clicking Run Report will return results from your org based on the filters estab
 From here you can save reports, add/remove filters, change the record to return criteria, and interact with result records.
 
 ### Saving Reports
-The button on the top right of the Quick Reports section will save the current filters of the report in to a new Quick Report. This will start a save event that will commit the report to the database and make it available in the Quick Reports menu.
+There are two buttons on the top right of the Reports section will save the current filters. This will start a save event that will commit the report to the database and make it available in the Quick Reports menu.
 
-Clicking the Save This Report button will prompt you to provide a Report Description. Once provided click save to proceed. The deployment will start and once completed it will show in the Quick Reports list.
+1. Save Report - This will save the report under the existing name. If it  is a new report it will ask you to input a name and a report description.
+
+1. Save As - This will open the UI to save a new report regardless if the report exists or not. 
 
 ![FileViewer Report Quick Report Saving](images/fileviewer-reporting-saving1.gif)
 
@@ -56,10 +58,68 @@ The buttons in Step 3 will allow you to change the returned record set.
 
 ![FileViewer Reporting Results](images/fileviewer-reporting-download1.png)
 
+- **Schedule Report** - This will allow you to schedule a report to drive business process based ont he returned results. for more see the [Scheduling Reports](#scheduling-reports) section below 
 - **Run Report** -  This button will run the report. When clicked it will go retrieve the data set again and capture any new records that should be returned based on the criteria.
 - **Download** - This button will download an Excel sheet with metadata on the Content Version records returned in the Results section.
 - **Download Files** - This button will download a zip file containing all the documents returned in the Results section.
 - **View Details** - This button will open a new window to that rows Selected Objects Salesforce Record.
+
+## Scheduling Reports 
+
+### Basic Scheduling
+Scheduling reports will allow a report to be run regularly and post platform event/ To learn more about which Salesforce technology can subscribe to platform events please see the following Salesforce Article, https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_subscribe.htm.
+
+To start click the Schedule Reports button to access the scheduling UI. This UI will open the scheduling UI for the current report but will also allow you to set Schedules for all the save reports in the org.
+
+![FileViewer File Report Scheduling](images/fileviewer-reporting-scheduling1.png)
+
+- Frequency: There are two options for Frequency, Monthly and Weekly. 
+- Days: This is a multi-select list aht lets you pick one or more days for the schedule to run on.
+- Start At: This is the time the schedule should run at the frequency and days your chose previously.
+
+At this point you can click Create Schedule to generate a scheduled job for the report with the setting you choose. You can generate more than one scheduled job for a report if needed.
+
+### Advanced Scheduling
+
+The Advanced button in the scheduling UI allows a user to input their own cron expression or have the choices build one. Once the advanced button is set the cron expression is no longer going to affect the choices (they are greyed out to indicate this)
+
+![FileViewer File Report Scheduling](images/fileviewer-reporting-scheduling2.png)
+
+## Using Flows to Automate Action From on Scheduled Reports.
+
+Scheduling a File Report results in a Platform event being published for each returned from the report. You can subscribe to these event by using a Platform event triggered flow. To setup a Platform Event Triggered Flow use the Salesforce documentation here https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_subscribe_flow.htm. When asked which platform event you
+want to choose select File Report Event as seen below. 
+
+![FileViewer File Report Scheduling with Flow](images/fileviewer-reporting-scheduling-flow1.png)
+
+The File Report Event allows access to teh follow information fo use with the flow:
+
+![FileViewer File Report Scheduling with Flow](images/fileviewer-reporting-scheduling-flow2.png)
+
+- Event Type: This value is currently set to "Report" to indicate where the vent was sourced from. It may be updated with new values in teh future.
+
+- Message: This Field will be populate with any system error messages that happen 
+
+- Number of Documents: This is the Number of Document associated with the record that was returned from the report for this Platform event. If the report is set up to return records without documents this will be 0.
+
+- Report: The Id of the Metadata record associated with the report that created the Platform event.
+
+- Report Details: The Description field from the Metadata record associated with the report that created the Platform event.
+
+- Report Name:The name (Custom-<scheduled Job Id>) of the Scheduled Job Associated with Report Schedule. 
+
+- Source Id(s): The Id of the record returned from the report that created the platform event.
+
+- Status: Blank unless there is an issue. 
+
+These files are available from teh REcord object when using the elements in a flow. Generally, using the Source Id(s) field to get records to update is a good way to go. Some use cases are:
+
+- Updating a field on a record when a document exists or does not exist.
+
+- Creating a Task or Chatter on the Source Id(s) record to alert the owner action is needed.
+
+Alternatively you can also use the [FIle Report Runner for Records](#file-report-runner-for-records)
+
 ## Creating Custom Reports
 
 Instead of using Quick Reports, a custom report can be created to store reports for specific business needs. To create a new report choose an object from the Select Object section in Step 1. Next add filters to that object and the docmuents you want to see in Step 2 and Step 3, respectively. Then choose which results you want to return in Step 4 and click Run Report.
