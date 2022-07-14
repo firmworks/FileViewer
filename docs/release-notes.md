@@ -3,6 +3,17 @@
 
 # FileViewer Release Notes
 
+
+## 0.18 - June 2022
+
+### What's New
+
+- Paging Data
+
+## 0.14 - 0.17 - June 2022
+
+Stability update
+
 ## 0.13 - June 2022
 
 ### What's New
