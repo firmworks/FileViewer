@@ -3,18 +3,7 @@
 
 # FileViewer Release Notes
 
-
-## 0.18 - June 2022
-
-### What's New
-
-- Paging Data
-
-## 0.14 - 0.17 - June 2022
-
-Stability update
-
-## 0.13 - June 2022
+## 0.19 - June 2022
 
 ### What's New
 
@@ -31,6 +20,12 @@ Stability update
 - View documents directly on record layouts
 - View supported audio and video files directly within the lightning page.
 - Enhanced File Previews directly integrated into the FileViewer search screen to allow for enhanced data entry, minimizing mistakes as users have direct context to the document being viewed.
+
+### Data Entry from Files made Easy
+
+- File Viewer list view user interface updated to support heave data entry from Salesforce files for auditing file content.
+- Auto-complete data in rows to more easily enter large amounts of data when using the File Viewer list.
+- Pagination added to lists to allow for easy navigation over hundreds of files while maintaining changes on previous pages.
 
 ### Reporting
 
