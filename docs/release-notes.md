@@ -3,6 +3,37 @@
 
 # FileViewer Release Notes
 
+## 0.24 August 
+
+### What's Nww
+
+- Bulk Upload Function for File Tagger Button for Upload - Normally Salesforce only allow you to upload 10 files at a time but with the new Bulk File Upload feature you can upload 100X that many in a single go. 
+
+    NOTE: If you have clickjack protection turned on you will need to add a trusted site to enable Bulk file Upload. Click [here](troubleshooting.md) for more information.
+
+- Download Record Files Component - If you have a lot fo files in your system use this Bulk Download feature to get a zip file of all your important documents.
+
+- Public Link Generation - Wether you want to generate a password protected public link for a single file or bulk generated public links for all your files, we have you covered. The New tabs in the FileViewer UI will allow users to create public link quicker than ever.
+
+- File Sharing Enhancement - Sharing  file with another record in Salesforce usually takes a lot of navigation. With the sharing tab in FileViewer users can share an existing files with any other object they have access to
+
+### Enhancements
+
+- FileViewer Interface Update - We cleaned up the gear menu in the FileViewer component to better organize the new features that have been added in this and previous releases.
+- Component Name Changes - The names of your favorite FileViewer components have been update to be more helpful when designing lightning apps.
+   - Content Viewer is now Single Content Record Viewer
+   - File Tag Launcher is now File Tagger Button for Upload
+   - Record Content Viewer is now Tabbed Display of Record Content
+- Tabbed Display of Record Content - This component can now be filtered using a configuration and can support both horizontal and vertical tabs.
+
+### Bug Fixes
+
+- There was a validation issue with currency fields in the List View UI for the FileViewer Component. It will say that "The entry is not a valid increment" but it sill save and update.  This no longer happens and the issue has been resolved.
+
+--------------------------------------------------
+
+## 0.20 - June 2022
+
 ## 0.19 - June 2022
 
 ### What's New
@@ -23,7 +54,7 @@
 
 ### Data Entry from Files made Easy
 
-- File Viewer list view user interface updated to support heave data entry from Salesforce files for auditing file content.
+- File Viewer list view user interface updated to support heavy data entry from Salesforce files for auditing file content.
 - Auto-complete data in rows to more easily enter large amounts of data when using the File Viewer list.
 - Pagination added to lists to allow for easy navigation over hundreds of files while maintaining changes on previous pages.
 
@@ -52,38 +83,4 @@
 
 ![FileViewer 11 Configuration Name Error](images/fileviewer-11-configuration-name-error.png)
 
---------------------------------------------------
-## 0.11 - February 2022
 
-### New Features
-
-#### File Reporting
-
-- Advanced cross-object reporting for Salesforce Files.
-- Quick reports included to get started with cross object reporting.
-- Save impactful reports to easily reuse later.
-- Download reports to act on your files.
-
-### Enhancements
-
-#### File Tagging
-
-- Supports Dependent Picklists and Record Types (excludes Record Type filtered picklists).
-- Improved user experience with dependent picklists when tags no longer apply.
-- Tag error visibility and the ability to re-tag files.
-- Provides the ability to set default tag values per object, lightning page, or more.
-- Lookup field tags with less than 20 records will display as a radio button list as opposed to a search interface.
-
-#### File Search
-
-- See your newest files first with default descending sort order for files based on Created Date.
-- New interface where end users can customize fields that show on tiles and in list view.
-- Supports the usage of Content Version Formula fields in filtering and file views.
-- New mobile interface using a stacked view for on-the-go users.
-
-#### Configuration Interface
-
-- New FileViewer Configurator provides a builder-like, friendly user interface:
-    - Set display fields, filter fields, and filter on specific objects for all components.
-    - Establish default values for tags using the field value section.
-    - Maintain unified security and visibility settings over multiple components.
