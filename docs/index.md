@@ -1,4 +1,4 @@
-# firmworks FileViewer
+# Firmworks FileViewer
 
 FileViewer is a native salesforce application designed to make the storing, retrieving and editing of Content faster and easier.
 
@@ -7,7 +7,7 @@ FileViewer is a native salesforce application designed to make the storing, retr
 - [File Reporting](file-reporting.md)
 - [Advanced Config](advanced-config.md)
 - [Release Notes](release-notes.md)
-- [Known Issues](known-issues.md)
+- [Troubleshooting](troubleshooting.md)
 
 ## Visit Us
 

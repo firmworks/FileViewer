@@ -1,14 +1,13 @@
 ![](./quickStartImages/fileviewer.png)
 [Documentation](index.md)
 
-# Knows Issue
+# Troubleshooting
+
+## 0.24 August Release
+
+<PALCEHOLDER ON BULK UPLAOD WITH CLICKJACK>
 
 ## 0.15 - June 2022 Release
-
-#### File Viewer List View Validation Issue
-![FileViewer 11 Upgrade Issue](images/june22-knownissue-currency-validation.gif)
-
-There is a validation issue with currency fields in the List View UI for the FileViewer Component. It will say that "The entry is not a valid increment" but it sill still save adn update. This validation can be ignored and will be fixed next release.
 
 #### File Tagger Component Changes
 ![FileViewer 11 Upgrade Issue](images/fileviewer-11-upgrade-error.png)

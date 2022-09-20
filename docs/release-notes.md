@@ -3,18 +3,24 @@
 
 # FileViewer Release Notes
 
+## 0.24 August 
 
-## 0.18 - June 2022
+### What's Nww
 
-### What's New
+- Bulk Upload Function for File Tagger Button for Upload - Normally Salesforce only allow you to upload 10 files at a time but with the new Bulk File Upload feature you can upload 100X that many in a single go. 
+NOTE: If you have clickjack protection turned on you will need to add a trusted site to enable Bulk file Upload.
+- Download Record Files Component - If you have a lot fo files in your system use this Bulk Download feature to get a zip of all your important documents.
 
-- Paging Data
+### Enhancements
 
-## 0.14 - 0.17 - June 2022
+- Component Name Changes - The names of your favorite FileViewer components have been update to be more helpful when design lightning apps.
+- Record Content Viewer - This component cna now be filtered using a configuration and can support both horizontal and vertical tabs.
 
-Stability update
+### Bug Fixes
 
-## 0.13 - June 2022
+- There was a validation issue with currency fields in the List View UI for the FileViewer Component. It will say that "The entry is not a valid increment" but it sill save and update.  This no longer happens and the issue has been resolved.
+
+## 0.20 - June 2022
 
 ### What's New
 
@@ -31,6 +37,12 @@ Stability update
 - View documents directly on record layouts
 - View supported audio and video files directly within the lightning page.
 - Enhanced File Previews directly integrated into the FileViewer search screen to allow for enhanced data entry, minimizing mistakes as users have direct context to the document being viewed.
+
+### Data Entry from Files made Easy
+
+- File Viewer list view user interface updated to support heavy data entry from Salesforce files for auditing file content.
+- Auto-complete data in rows to more easily enter large amounts of data when using the File Viewer list.
+- Pagination added to lists to allow for easy navigation over hundreds of files while maintaining changes on previous pages.
 
 ### Reporting
 
