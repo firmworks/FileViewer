@@ -34,6 +34,8 @@
 
 ## 0.20 - June 2022
 
+## 0.19 - June 2022
+
 ### What's New
 
 - Content Viewer Control - Preview pdfs, documents, videos and audio directly in lightning layouts.
