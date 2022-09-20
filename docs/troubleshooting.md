@@ -5,8 +5,6 @@
 
 ## 0.24 August Release
 
-<<<<<<< Updated upstream
-=======
 ### Bulk file upload appears to hang on 'Awaiting Registration'
 
 Experience:
@@ -30,14 +28,13 @@ Add a trusted domain to your org's own lightning domain. This will allow compone
 
 ![Add Trusted Domain](images/troubleshooting/bulkupload/clickjackprotection_adddomain.png)
 
-Add your own lightning domain as a trusted domain to serve up your visualforce domain. https://<YOUR DOMAIN>.lightning.force.com
+Add your own lightning domain as a trusted domain to serve up your visualforce domain. https://\<YOUR DOMAIN\>.lightning.force.com
 
 ![Add Trusted Domain](images/troubleshooting/bulkupload/clickjackprotection_adddomain_record.png)
 
 Success:
 
 ![Successful rendering of Bulk](images/troubleshooting/bulkupload/clickjackprotection_success.png)
->>>>>>> Stashed changes
 
 ## 0.15 - June 2022 Release
 
