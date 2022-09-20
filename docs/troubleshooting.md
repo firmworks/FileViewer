@@ -5,7 +5,6 @@
 
 ## 0.24 August Release
 
-<PALCEHOLDER ON BULK UPLAOD WITH CLICKJACK>
 
 ## 0.15 - June 2022 Release
 
