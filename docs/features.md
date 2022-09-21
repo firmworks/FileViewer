@@ -4,15 +4,17 @@
 # Features
 
 1. [Upload and Tag](#upload-and-tag)
-2. [Search and Filter](#search-and-filter)
-3. [View on Record](#view-on-record)
-4. [Resizable Preview](#resizable-previews)
-5. [Bulk Upload](#bulk-upload)
-6. [Tag and Update Existing Documents Quickly](#tag-and-update-existing-documents-quickly-and-easily)
-7. [Tabbed Viewer](#tabbed-viewer)
-8. [Powerful File Reporting](#file-reporting)
-9. [File Auditing and Compliance](#file-auditing-and-compliance)
-10. [Record Reports](#record-reports)
+1. [Search and Filter](#search-and-filter)
+1. [View on Record](#view-on-record)
+1. [Resizable Preview](#resizable-previews)
+1. [Public Link Management](#public-link-management)
+1. [Enhanced Entity Sharing Management](#enhanced-entity-sharing-management)
+1. [Bulk Upload](#bulk-upload)
+1. [Tag and Update Existing Documents Quickly](#tag-and-update-existing-documents-quickly-and-easily)
+1. [Tabbed Viewer](#tabbed-viewer)
+1. [Powerful File Reporting](#file-reporting)
+1. [File Auditing and Compliance](#file-auditing-and-compliance)
+1. [Record Reports](#record-reports)
 
 ## Upload And Tag
 
@@ -37,6 +39,18 @@ View image, pdf and doc files directly on the record without navigating away
 Resize the viewing pane directly on the layout to read the fine print.
 
 ![View on layout Features](images/features/view_on_layout.gif)
+
+## Public Link Management
+
+Create, Delete, View Content Public links easily to provide external users access. Enhances default public link experience by giving users the option to use passwords to protect links. Delete public links easily to redact access.
+
+![Public Links](images/features/public_links.gif)
+
+## Enhanced Entity Sharing Management
+
+Create, Delete, View Content Document Link records directly on the layout. Easily create links to any object record in Salesforce more than just users.
+
+![Sharing Management](images/features/entity_sharing.gif)
 
 ## Bulk Upload
 
