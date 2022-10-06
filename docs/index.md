@@ -6,6 +6,7 @@ FileViewer is a native salesforce application designed to make the storing, retr
 - [Features](features.md)
 - [File Reporting](file-reporting.md)
 - [Advanced Config](advanced-config.md)
+- [Component Appendix](component-appendix.md)
 - [Release Notes](release-notes.md)
 - [Troubleshooting](troubleshooting.md)
 

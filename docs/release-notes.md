@@ -17,6 +17,7 @@
 
 - File Sharing Enhancement - Sharing  file with another record in Salesforce usually takes a lot of navigation. With the sharing tab in FileViewer users can share an existing files with any other object they have access to
 
+
 ### Enhancements
 
 - FileViewer Interface Update - We cleaned up the gear menu in the FileViewer component to better organize the new features that have been added in this and previous releases.

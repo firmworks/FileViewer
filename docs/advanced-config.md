@@ -1,31 +1,19 @@
 ![](./images/fileviewer.png)
 [Documentation](index.md)
 
-# Additional Setup
+# **Additional Setup**
 
-- [Additional Optional Setup](#additional-optional-setup)
-   - [Assigning the Default Tab to Apps](#assigning-the-default-tab-to-apps)
-   - [Creating a new FileViewer Tab](#creating-a-new-fileviewer-tab)
-   - [Configuring a Record Page Layout](#configuring-a-record-page-layout)
-      - [Content Viewer](#content-viewer)
-      - [File Report Results](#file-report-results)
-      - [File Report Runner for Records](#file-report-runner-for-records)
-      - [File Tagger](#file-tagger)
-      - [FileViewer](#fileviewer)
-      - [Record Content Viewer](#record-content-viewer)
-   - [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-fileviewer-configuration-metadata-record)
-   - [Configuration for Experience Page](#configuration-for-experience-page)
-- [Component Appendix](#component-appendix)
-   - [FileViewer Appendix](#fileviewer-appendix)
-   - [File Tag Launcher Appendix](#file-tag-launcher-appendix)
-
-### Modifying Display Fields in FileViewer Quick Action
-
-In order to modify display fields on the Quick Action you must create a configuration with the field you want to see. The configuration name needs to match the object API name as it is in Salesforce. EX. Account is Account, Custom Object A is Custom_Object_A__c. See [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-file-viewer-configuration-metadata-record) for more information on setting up a configuration.
-
-Here is an example record build on the Account with custom tags added:
-![FileViewer Quick Action Metadata Config](images/fileviewer-quick-action-metadata-config1.png)
-
+- [Assigning the Default Tab to Apps](#assigning-the-default-tab-to-apps)
+- [Creating a new FileViewer Tab](#creating-a-new-fileviewer-tab)
+- [Configuring a Record Page Layout](#configuring-a-record-page-layout)
+   - [Single Content Record Viewer](#single-content-record-viewer)
+   - [File Report Results](#file-report-results)
+   - [File Report Runner for Records](#file-report-runner-for-records)
+   - [File Tagger Button for Upload](#file-tagger-button-for-upload)
+   - [FileViewer](#fileviewer)
+   - [Tabbed Display of Record Content](#tabbed-display-of-record-content)
+- [Setting up a FileViewer Configuration Metadata Record](#setting-up-a-fileviewer-configuration-metadata-record)
+- [Configuration for Experience Page](#configuration-for-experience-page)
 
 ### Assigning the Default Tab to Apps
 
@@ -51,14 +39,18 @@ Here is an example record build on the Account with custom tags added:
 
 ### Configuring a Record Page Layout
 
-You can add any of the following components to a page layout. Each Component has a series of Design Options you can use to customize each them. To see the design layout use the [Component Appendix](#Component Appendix).
+You can add any of the following components to a page layout. Each Component has a series of Design Options you can use to customize each them. To see the design layout use the [Component Appendix](component-appendix.md).
 
-#### **Content Viewer**
-![FileViewer Configure Content Viewer](images/fileviewer-configure-content-viewer.png)
+#### **Single Content Record Viewer**
+![FileViewer Configure Content Viewer](images/fileviewer-configure-content-viewerv2.png)
 
 1. Configuration: 
 
    1. Content Version Id - Set a Salesforce Content Version Id here to show it in the Component. To get the Content Version Id, please use the following SOQL in Workbench or Developer Console:
+
+2. Appearance:
+
+   1. Max Height: This will set the max height on the component in the page layout. If this is not set the height will be set based on the length of the file referenced.
 
 > SELECT Id FROM ContentVersion WHERE ContentDocumentId = '<***Insert The Salesforce File Id you want to show in the component here***>'
 
@@ -118,7 +110,7 @@ You can add any of the following components to a page layout. Each Component has
    `<iframe width="560" height="315" src="https://www.youtube.com/embed/EO1Z-sNx_bs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
 
-#### **File Tag Launcher**
+#### **File Tagger Button for Upload**
 ![FileViewer Configure File Tag Launcher](images/fileviewer-configure-file-tag-launcher.png)
 
 1. Setup:
@@ -238,7 +230,7 @@ You can add any of the following components to a page layout. Each Component has
 
    1. Cache Id – If you want the behavior to be different between instances of the file's viewer. Use this variable to a unique variable or name to reference the way you have the component set up in each place. If you have the component set up on the account a very specific, you want to use for every object, use the cache id to not have to setup all the settings again.
 
-#### **Record Content Viewer**
+#### **Tabbed Display of Record Content**
 ![FileViewer Configure Record Content Viewer](images/fileviewer-configure-record-content-viewer.png)
 
 1. Configuration:
@@ -275,24 +267,58 @@ If there was a custom object named Custom_Object__c, naming the Configuration cu
 
 Regardless of the Configuration name you will see them in the 2b Configuration Name Drop down in the component design.
 
-#### Field Options
+#### Display Fields
 
-![fileviewer metadata configuration field options](images/fileviewer-configuration-field-options.png)
+![fileviewer metadata configuration display fields](images/fileviewer-configuration-display-fields.png)
 
-In this section you can choose tags from the Content Version you want to include as Display Fields and/or Filter Fields, in addition to filter Object. To Add one or more items to the configuration, click an item then use the right pointing arrow to move it to the Selected Section.
+In this section you can choose tags from the Content Version you want to include as Display Fields on in the Field Options in the [FileViewer](component-appendix.md#field-options) component. To Add one or more items to the configuration, click an item then use the right pointing arrow to move it to the Selected Section. Once a field has been added to Available To User's For Display you can default them showing up by checking the Boxes in the Default Show These Fields section.
 
-Filter Fields and Filter Objects only apply when the configuration is applied to the FileViewer Component.
 
-#### Field Values
-![fileviewer metadata configuration field values](images/fileviewer-configuration-field-values.png)
+#### Filter Fields
 
-In this section you can set predefined values that will be applied when the component this configuration is used for uploads a file. Select a tag from the drop down list and type the default value you want to set in the entry that appears to the right.
+![fileviewer metadata configuration filter fields](images/fileviewer-configuration-filter-fields.png)
+
+In this section you can choose which fields you want to be visible to filter on in the search sidebar in the [FileViewer](component-appendix.md#search-section) component. In addition, this also determines which fields a user can set when this configuration is referenced in the [File Tagger Button for Upload](component-appendix.md#file-tagger-button-for-upload-appendix)
+
+#### Content Link Entities
+
+![fileviewer metadata Content Link Entities](images/fileviewer-configuration-content-link-entities.png)
+
+In this section you can choose which Object that could be content document links will be showing when using the Download with Related action. This will enable you to see each way a file is linked to records in your own for the objects selected in this list.
+
+#### Default Field Values
+
+![fileviewer metadata configuration default field values](images/fileviewer-configuration-default-field-values.png)
+
+In this section you can set default field values. when this configuration is referenced in a FileViewer component it ill set the values of the search on load. you will still only see the fields that you chose in the Filter Fields section. This means you can have filters that users may not be able to modify if the field is no present in the Filter Fields section. 
+
+When this configuration is referenced in a File Tagger Button for Upload component it will set the default values for the associated tags when a document is uploaded. This will set default values even if the field is not chosen in the Filter Fields to be displayed to the user.
+
+#### Default Filter
+
+![fileviewer metadata configuration default filters](images/fileviewer-configuration-default-filter.png)
+
+In this section allows you to append a where clause to the search criteria the users input. This is a filter that cannot be overridden by the end user and is not visible on the except via a warning on the Search Panel.
+
+![fileviewer metadata configuration default filter warning](images/fileviewer-configuration-deafult-filter-warning.png)
+
+Using this requires SOQL knowledge. To learn more about SOQL please use the following link:
+
+https://developer.salesforce.com/docs/atlas.en-us.soql_sosl.meta/soql_sosl/sforce_api_calls_soql_select_conditionexpression.htm
 
 #### Sharing and Visibility Options
 
-![fileviewer metadata configuration sharing and visibility options](images/fileviewer-configuration-sharing-visibility.png)
+![fileviewer metadata configuration sharing and visibility options](images/fileviewer-configuration-sharing-visibility-options.png)
 
-Here you can set which sharing and visibility options the component will use. For more on these options please see the configuration section of the [File Tag Launcher](#file-tag-launcher).
+Here you can set which sharing and visibility options the component will use. For more on these options please see the configuration section of the [File Tagger Button for Upload](component-appendix.md#file-tagger-button-for-upload-appendix).
+
+#### Actions and Activities
+
+![fileviewer metadata configuration actions and activities](images/fileviewer-configuration-actions-and-activities.png)
+
+In this section you can activate and deactivate various actions that a user can see from the FileViewer component.
+
+#### Saving a Configuration
 
 Once the Configuration settings are established click the save button on the top right of the Configuration header.
 
@@ -327,98 +353,3 @@ You will need to share the following apex classes with your Experience user prof
 - firmworks.ContentViewerController
 
 - firmworks.RecordReportController
-
-## **Component Appendix**
-
-### **FileViewer Appendix**
-
-#### Actions and Settings
-
-1. This gear represents the FileViewer advanced settings. Clicking it will reveal the following menu.
-
-   ![FileViewer Tag Launcher](images/fileviewer-advanced-settings.png)
-
-   1. Show Search Panel (On/Off) - This allows for a user to show and hide the search panel. By default the search panel is shown.
-
-   1. Change View (Tiles/List) - This allows for a user to toggle between seeing files as tiles or seeing files in a list.
-
-   1. Choose Fields (Show/Hide) -  This allows for a user to see a list of Displayed fields. It also allows users to modify their view to show specific tags they are interested in. Changing displayed fields does not affect FileViewers ability to filter on those fields. To reset displayed fields click the "i" icon shown below.
-
-      ![FileViewer Displayed Fields Reset](images/fileviewer-advanced-settings-reset.png)
-
-1. The lightning bolt represents the actions you can take from the FileViewer Component
-
-   ![FileViewer Actions](images/fileviewer-advanced-settings-actions.png)
-
-   1. Download Data - This button will download an Excel sheet for all displayed Files. The Excel sheet shows a list of all the file field values for those files.
-
-   1. Download Relationships - This button will download an Excel sheet containing the Content Document Id and Linked Entity Details, such as a Object Name, Record name, and Record Id.
-
-   1. Download Files -  This button will download a zip file containing all the displayed files.
-
-
-#### Search Section
-
-The top most bar will allow you to search any of the object allowed to be search from the setup of the component. If Search Objects was left blank it will search all objects. The Apply button will apply any search elements defined in the search section.
-
-   1. Each tag is shown in the search section filter documents. Check the boxes for the tags you want to filter on the click Apply.
-
-   1. Clicking the + button below the ‘Within The Following Date Ranges:’ section will result in a date filter section being added.
-   ![Date Range Filter1](images/date_range_filter1.png)
-
-   1. This allows you to use the date fields on the Content Version to filter. If you choose Custom range, you will be given a date picker UI to choose the dates.
-
-      ![Date Range Filter2](images/date_range_filter2.png)
-
-      This can be added multiple times. Once you add dates to filter on click the Apply button.
-
-   1. Sort By will allow you to sort the searched files by the chosen field
-
-   1. Max results limits the number of results per page by the chosen number
-
-#### Tile View
-
-1. Results Section: This is the files returned by your search results. Each tile is set up the same way. Clicking one of the edit panels will allow the user to edit the file.
-
-   1. Preview of the Document - You can click this thumbnail to access the Salesforce modal preview of the file.
-
-   1. All tags on the Content Document object - You can click the pencil next to a Tag to edit them in the preview tile.
-
-
-#### List View
-
-![FileViewer Tag Launcher](images/fileviewer-advanced-settings-list-view-ui.png)
-
-1. Results Section: This is the files returned by your search results. Each row is set up the same way. Clicking the eye icon on the left of a row to Show the file on the right.
-
-   1. List Options: 
-
-      1. Use slider to change width of the scalable image -  This will adjust the width of the scalable image tab in the document preview when the eye icon is clicked on the left hand side of a row.
-
-      1. Use slider to change height of the scalable image - This will adjust the height of the scalable image tab in the document preview when the eye icon is clicked on the left hand side of a row.
-
-      1. Scroll Grid - This toggle will allow the columns to adjust to the length of the field and add a scroll bar to the bottom of the List View to allow a user to scroll through the grid.
-
-   1. Preview of the Document (on the right) - The Document preview has three tabs:
-      
-      1. Scalable Image - This is a view of the selected rows file. The width and height are set using the sliders in the List Options section.
-
-      1. Image - This is a thumbnail of the file that can be click to show the standard Salesforce preview.
-
-      1. Record Details - This tab can be use to see the Tags in the same way as the tile view.
-
-   1. Live View Columns -  These columns are fully editable for each row by clicking a pencil in the column. To delete all edits click the red pencil on the left of the row next to the eye icon. Each Row will have validation for specific field types setup on the Salesforce Object.
-
-#### **File Tag Launcher Appendix**
-
-![FileViewer Tag Launcher](images/fileviewer_tag_launcher.png)
-
-When using this UI please make sure you follow the steps in order (1 -> 2 -> 3) to make sure tagging and sharing works correctly with each file.
-
-1. This Section Shows you the Tags they can be associated with the files uploaded. Make sure to set your tags before you upload the file. Tags can be left the same between upload or changed. If you use the Upload Files button the set tags will be associated with all files uploaded.
-
-1. This section allows for the user to decide if the uploaded files should be shared with all users (All Users) or only internal users (Default). This works on a per file bases if drag drop is used or with multiple files if using the Upload Files button.
-
-1. This Section allows for the user to decide if they want to have the files shared with inferred sharing from the related records (Record) or only if the file should be view only to people with record access (viewer). This works on a per file bases if drag drop is used or with multiple files if using the Upload Files button.
-
-1. This is the section where you literally upload the files. You can drag drop one file at a time or click the upload files button to upload multiple files.
