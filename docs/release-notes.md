@@ -3,11 +3,25 @@
 
 # FileViewer Release Notes
 
-## 0.24 August 
+## 0.26 December
 
-### What's Nww
+### What's New
 
-- Bulk Upload Function for File Tagger Button for Upload - Normally Salesforce only allow you to upload 10 files at a time but with the new Bulk File Upload feature you can upload 100X that many in a single go. 
+- Flow Action To Get Links for documents - Create emails with lists of document links, the benefits of using links over sending files are numerous. Update documents without having to send new files, remove links for outdated or incorrect information, password protect links to prevent over sharing, expire links to ensure files aren't exposed any longer than need be.
+
+- Ablility to delete from tabbed viewing controls
+
+- Carousel View
+
+### Enhancements
+
+- Duplicate file upload check on bulk uploader - when using the bulk uploader a duplicate check is performed to prevent uploading files that already are uploaded.
+
+## 0.24 August
+
+### What's New
+
+- Bulk Upload Function for File Tagger Button for Upload - Normally Salesforce only allow you to upload 10 files at a time but with the new Bulk File Upload feature you can upload 100X that many in a single go.
 
     NOTE: If you have clickjack protection turned on you will need to add a trusted site to enable Bulk file Upload. Click [here](troubleshooting.md) for more information.
 
