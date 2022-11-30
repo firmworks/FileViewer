@@ -8,10 +8,12 @@
 ### What's New
 
 - Flow Action To Get Links for documents - Create emails with lists of document links, the benefits of using links over sending files are numerous. Update documents without having to send new files, remove links for outdated or incorrect information, password protect links to prevent over sharing, expire links to ensure files aren't exposed any longer than need be.
+    [Flow Actions](features#flow#flow-action-public-links)
 
-- Ablility to delete from tabbed viewing controls
+- Ability to delete files from tabbed viewing controls - accessible through the designer.
 
-- Carousel View
+- Carousel View - alternative to tabs, users can use left/right controls to navigate through files.
+    [Viewer](features#flow##tabbed-viewer)
 
 ### Enhancements
 

@@ -11,7 +11,7 @@
 1. [Enhanced Entity Sharing Management](#enhanced-entity-sharing-management)
 1. [Bulk Upload](#bulk-upload)
 1. [Tag and Update Existing Documents Quickly](#tag-and-update-existing-documents-quickly-and-easily)
-1. [Tabbed Viewer](#tabbed-viewer)
+1. [Multi file Viewer](#tabbed-viewer)
 1. [Powerful File Reporting](#file-reporting)
 1. [File Auditing and Compliance](#file-auditing-and-compliance)
 1. [Record Reports](#record-reports)
@@ -73,6 +73,7 @@ Load viewable file content directly on the screen so users do not have to naviga
 
 ![Tabbed viewers](images/features/tabbed_files.gif)
 
+![Carousel viewers](images/features/viewer/carousel.gif)
 
 ## File Reporting
 
