@@ -1,0 +1,60 @@
+![](./quickStartImages/fileviewer.png)
+[Documentation](index.md)
+
+# File Events
+
+File Events uses Salesforce Platform Events to allow you to automate document changes and business logic. Salesforce does not allow Record Triggered flows on the Files objects but the Platform Events published in the File Events package are based on the Content Document, Content Version, and Content Document Link. This allows you to automated from file inserts and updates.
+
+For more information on Salesforce Platform Event please see the Salesforce documentation below.
+
+https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro.htm
+
+## Configuration and Setup
+
+Once the File Events package has been installed you can use it right away. There are no permission sets to share or licenses to manage. 
+
+## File Event Management
+
+Because File Events uses Apex Triggers to publish the associated platform events, we allows the admin a way to disable the Triggers. This could be important foe times when you may need to do bulk data uploading into the org or to reduce the number of events published if you are not using them to drive business processes.
+
+These File Event Trigger controls are lCustom Metadata Types called Apex Trigger Setting. To get to the Custom Metadata Enter Salesforce Setup and Type Metadata in the Quick Find and then select Custom Metadata Types. Finally click Manage records to the left of the Apex Trigger Setting Metadata Type.
+
+![File Events Metadata 1](images/fileevents-fem-metadata1.png)
+
+There are three records in this Metadata Type, one for each sObject Involved in Salesforce Files; Content Document, Content Version, and Content Document Link. Each record controls the trigger for that object and when it will publish the Platform Event. 
+
+To Fully Disable a File from creating a Platform Event uncheck all of the action type boxes (After Insert, After Update, After Delete, After Undelete), then save the record. The Example below would mean that we would not be creating Platform Events for the Content Version Object, thus automation could not be build from it using the File Events Package.
+
+![File Events Metadata 2](images/fileevents-fem-metadata2.png)
+
+In the next example, we would only get Platform Events when a Content Document link was created or deleted.
+
+![File Events Metadata 3](images/fileevents-fem-metadata3.png)
+
+Once we have established when we want Platform Event to get published we cna move on to building automation using Salesforce Platform Event Triggered Flows.
+
+## File Event Flows
+
+If you are not familiar with Flows please learn more about them from Salesforce Trailhead.
+
+https://trailhead.salesforce.com/content/learn/trails/automate_business_processes
+
+If you are familiar with flows Platform Event Triggered flows may still be new, but don;t worry it is just like a record triggered flow but the record is just one of File Events Platform Events.
+
+To create a new Platform Event Triggered Flow go to Salesforce Setup and type Flows into the Quick Find and select Flows. then Click New Flow and Choose Platform Event Triggered Flow. Finally Click Create to Start Building your Flow.
+
+![File Events  Flows 1](images/fileevents-fef-flows1.png)
+
+First tou will need to select one of the following Platform Events to start building automation with:
+
+![File Events  Flows 2](images/fileevents-fef-flows2.png)
+
+- **Content Document Event** - Use this event if you need to trigger automation when a Content Document is Created, Updated, Deleted, or Undeleted. This could be used when you want to change a File's Title or take an action when a File is deleted.
+- **Content Document Link Event** - Use this event if yu need to trigger automation when a Content Document Link is Created. A Content Document Link connects a Salesforce record (like an Account or a Case) to a Content Document. This could be used to take an action on a related object when a file is uploaded to it or to Adjust/Default a File Tag based on the object it is uploaded to.
+- **Content Version Event** - Use this event if you want to trigger automation when a Content Version is Updated. This could be used to trigger automation based on a File Tag or to build or update an Analog Object to use Salesforce reporting on your tags.
+
+Once you have chosen your Platform Event you can build automation like in a Record Triggered Flow. The next section will describe the fields on the three Platform Events in depth.
+
+## File Event Platform Event Glossary
+
+## Considerations When Using File Events
