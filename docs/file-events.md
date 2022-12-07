@@ -3,7 +3,11 @@
 
 # File Events
 
-File Events uses Salesforce Platform Events to allow you to automate document changes and business logic. Salesforce does not allow Record Triggered flows on the Files objects but the Platform Events published in the File Events package are based on the Content Document, Content Version, and Content Document Link. This allows you to automated from file inserts and updates.
+File Events uses Salesforce Platform Events to allow you to automate document changes and business logic. Salesforce does not allow Record Triggered flows on the Files objects but the Platform Events published in the File Events package are based on the Content Document, Content Version, and Content Document Link. This allows you to automate from Salesforce File inserts and updates.
+
+For reference here is a high level image of the Salesforce File Object Structure and how it works with FileViewer.
+
+![File Events Metadata 1](images/fileevents-salesforce-file-structure.png)
 
 For more information on Salesforce Platform Event please see the Salesforce documentation below.
 
@@ -57,4 +61,47 @@ Once you have chosen your Platform Event you can build automation like in a Reco
 
 ## File Event Platform Event Glossary
 
+### Content Document Event
+
+Action - This field will tell you what context the platform event was created in. It can be one of the following values:
+
+- afterInsert
+- afterUpdate 
+- afterDelete
+- afterUndelete
+
+Content Document Id - This is the Content Document Id that created the Platform Event.
+
+### Content Document Link Event
+
+Action - This field will tell you what context the platform event was created in. It can be one of the following values:
+
+- afterInsert
+- afterUpdate 
+- afterDelete
+- afterUndelete
+
+Content Document Id - This is the Content Document Id that created the Platform Event. 
+
+Content Document Link Id - This is the Id of the Content Document Link. This is a junction object that connects a Content Document and any other File enabled sObject.
+
+Linked Entity Id - This is the Id for the sObject that is connected to the Content Document via the Content Document Link. This is a polymorphic lookup so it can be any object that allows files. In a Flow that uses this Id you will need to ascertain what the Object Name is before doing Get Elements to prevent errors.
+
+### Content Version Event
+
+Action - This field will tell you what context the platform event was created in. It can be one of the following values:
+
+- afterInsert
+- afterUpdate 
+- afterDelete
+- afterUndelete
+
+Content Document Id - This is the Content Document Id that created the Platform Event.
+
+Content Version Id - This is the Id of the Content Version. The Content Version is where the Tagging Data is stored in Salesforce. Use this object to view and update tags on the Files.
+
 ## Considerations When Using File Events
+
+- If you are using Bulk Upload in FileViewer you will not be able to use the Content Version Event and will need to turn fully deactivate the Content Version Apex Trigger Setting. If you do not, it could result in the following error:
+
+![File Events  Flows 1](images/fileevents-considerations1.png)
