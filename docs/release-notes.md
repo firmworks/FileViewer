@@ -7,17 +7,28 @@
 
 ### What's New
 
-- Flow Action To Get Links for documents - Create emails with lists of document links, the benefits of using links over sending files are numerous. Update documents without having to send new files, remove links for outdated or incorrect information, password protect links to prevent over sharing, expire links to ensure files aren't exposed any longer than need be.
-    [Flow Actions](features#flow#flow-action-public-links)
+- Flow support Invocable Action To Get Public Links for Documents. Create emails with lists of document links, the benefits of using links over sending files are numerous.  [Flow Actions](features#flow-action-public-links)
+        - Update documents without having to send new files
+        - Delete links effectively redacting outdated or incorrect information
+        - Password protect links to prevent over sharing and URL replays
+        - Expire links to ensure files aren't exposed any longer than need be.
 
 - Ability to delete files from tabbed viewing controls - accessible through the designer.
 
-- Carousel View - alternative to tabs, users can use left/right controls to navigate through files.
-    [Viewer](features#flow##tabbed-viewer)
+- Carousel View - Record's Content Viewer has an alternative to tabs, users can use left/right controls to navigate through files.
+    [Viewer](features#tabbed-viewer)
+
 
 ### Enhancements
 
 - Duplicate file upload check on bulk uploader - when using the bulk uploader a duplicate check is performed to prevent uploading files that already are uploaded.
+
+- Upload and Tag now has the ability to have 'Post Upload Actions'
+    - close - closes the modal
+    - show results - displays a fileviewer with the uploaded files in the same screen
+    - fileviewer - opens fileviewer in a new tab with the recent uploaded values
+
+- FileViewer control accepts url parameter of c__contentIds - as a comma delimited list of content document ids to display. Searching, filtering and all other behaviors are performed within the list of ids as the base.
 
 ## 0.24 August
 
