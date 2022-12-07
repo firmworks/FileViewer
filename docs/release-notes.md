@@ -21,14 +21,19 @@
 
 ### Enhancements
 
-- Duplicate file upload check on bulk uploader - when using the bulk uploader a duplicate check is performed to prevent uploading files that already are uploaded.
+- Tag and Upload changes
+    - Duplicate file upload check on bulk uploader. When using the bulk uploader a duplicate check is performed and allows the user to remove duplicates prevent uploading files that already are uploaded.
 
-- Upload and Tag now has the ability to have 'Post Upload Actions'
-    - close - closes the modal
-    - show results - displays a fileviewer with the uploaded files in the same screen
-    - fileviewer - opens fileviewer in a new tab with the recent uploaded values
+    - Upload and Tag now has the ability to have 'Post Upload Actions'
+        - close - closes the modal
+        - show results - displays a fileviewer with the uploaded files in the same screen
+        - fileviewer - opens fileviewer in a new tab with the recent uploaded values
 
-- FileViewer control accepts url parameter of c__contentIds - as a comma delimited list of content document ids to display. Searching, filtering and all other behaviors are performed within the list of ids as the base.
+    - Bulk file upload now performs updating of content in chunks of 25 to prevent triggers on ContentVersion/ContentDocument from hitting Salesforce governor limits.
+
+- FileViewer control
+    - Accepts url parameter of c__contentIds - as a comma delimited list of content document ids to display. Searching, filtering and all other behaviors are performed within the list of ids as the base.
+
 
 ## 0.24 August
 
