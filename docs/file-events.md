@@ -48,7 +48,6 @@ https://trailhead.salesforce.com/content/learn/trails/automate_business_processe
 https://trailhead.salesforce.com/content/learn/trails/automate_business_processes)
 
 
-https://trailhead.salesforce.com/content/learn/trails/automate_business_processes
 
 If you are familiar with flows Platform Event Triggered flows may still be new, but don;t worry it is just like a record triggered flow but the record is just one of File Events Platform Events.
 
