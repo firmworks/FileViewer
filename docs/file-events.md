@@ -68,7 +68,8 @@ You will need to select one of the following Platform Events to start building a
 - **Content Version Event** - Use this event if you want to trigger automation when a Content Version is Updated. This could be used to trigger automation based on a File Tag or to build or update an Analog Object to use Salesforce reporting on your tags. An important note - Content Version events do not fire insert, delete and undelete events - track these events with the Content Document events instead.
 
 
-Once you have chosen your Platform Event you can build automation like in a Record Triggered Flow. The next section will describe the fields on the three Platform Events in depth.
+Once you have selected which Platform Event to use, you can then continue building your automation like you would with a Record Triggered Flow. The next section will describe the fields on the three Platform Events in depth.
+
 
 ## File Event Platform Event Glossary
 
