@@ -38,7 +38,8 @@ In the next example, we would only get Platform Events when a Content Document l
 
 ![File Events Metadata 3](images/fileevents-fem-metadata3.png)
 
-Once we have established when we want Platform Event to get published we cna move on to building automation using Salesforce Platform Event Triggered Flows.
+Once we have established which Platform Events to get published we can continue on to building automation using Salesforce Platform Event Triggered Flows.
+
 
 ## File Event Flows
 
