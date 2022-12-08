@@ -63,7 +63,8 @@ You will need to select one of the following Platform Events to start building a
 ![File Events  Flows 2](images/fileevents-fef-flows2.png)
 
 - **Content Document Event** - Use this event if you need to trigger automation when a Content Document is Created, Updated, Deleted, or Undeleted. This could be used when you want to change a File's Title or take an action when a File is deleted.
-- **Content Document Link Event** - Use this event if yu need to trigger automation when a Content Document Link is Created. A Content Document Link connects a Salesforce record (like an Account or a Case) to a Content Document. This could be used to take an action on a related object when a file is uploaded to it or to Adjust/Default a File Tag based on the object it is uploaded to.
+- **Content Document Link Event** - Use this event if yu need to trigger automation when a Content Document Link is Created. A Content Document Link connects a Salesforce record (like an Account, Case or custom objects) to a Content Document. This event could be used to take an action on a related object when a file is uploaded to it or to adjust/default a ContentVersion field based on the object it is uploaded to.  An important note - Content document links deletion events do not always fire, undelete is always unsupported.
+
 - **Content Version Event** - Use this event if you want to trigger automation when a Content Version is Updated. This could be used to trigger automation based on a File Tag or to build or update an Analog Object to use Salesforce reporting on your tags.
 
 Once you have chosen your Platform Event you can build automation like in a Record Triggered Flow. The next section will describe the fields on the three Platform Events in depth.
