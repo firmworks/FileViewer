@@ -101,7 +101,8 @@ Action - This field will tell you what context the platform event was created in
 - afterInsert *Use ContentDocument insert event instead
 
 - afterUpdate 
-- afterDelete
+- afterDelete *Use ContentDocument delete event instead
+
 - afterUndelete
 
 Content Document Id - This is the Content Document Id that created the Platform Event.
