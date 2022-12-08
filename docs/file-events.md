@@ -43,7 +43,10 @@ Once we have established which Platform Events to get published we can continue 
 
 ## File Event Flows
 
-If you are not familiar with Flows please learn more about them from Salesforce Trailhead.
+Salesforce publishes excellent learning materials on the uses of Flows - Check out this free Trailhead before continuing. [
+https://trailhead.salesforce.com/content/learn/trails/automate_business_processes](
+https://trailhead.salesforce.com/content/learn/trails/automate_business_processes)
+
 
 https://trailhead.salesforce.com/content/learn/trails/automate_business_processes
 
