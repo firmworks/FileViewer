@@ -98,7 +98,8 @@ Linked Entity Id - This is the Id for the sObject that is connected to the Conte
 
 Action - This field will tell you what context the platform event was created in. It can be one of the following values:
 
-- afterInsert
+- afterInsert *Use ContentDocument insert event instead
+
 - afterUpdate 
 - afterDelete
 - afterUndelete
