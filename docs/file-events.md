@@ -23,7 +23,8 @@ Once the File Events package has been installed you can use it right away. There
 Specific Salesforce object events (before/after, insert, update, delete) can be disabled via an included custom metadata configuration record. This ability to turn on and off the generation of Platform events based on Content object's DML is useful to control your business process work flows (e.g. bulk data updates).
 
 
-These File Event Trigger controls are lCustom Metadata Types called Apex Trigger Setting. To get to the Custom Metadata Enter Salesforce Setup and Type Metadata in the Quick Find and then select Custom Metadata Types. Finally click Manage records to the left of the Apex Trigger Setting Metadata Type.
+The included Custom Metadata Type to control the Platform Event generation is called 'Apex Trigger Setting'. To get to the Custom Metadata record - Enter Salesforce Setup and Type Metadata in the Quick Find and then select Custom Metadata Types. Click 'Manage records' to the left of the 'Apex Trigger Setting' Custom Metadata Type.
+
 
 ![File Events Metadata 1](images/fileevents-fem-metadata1.png)
 
