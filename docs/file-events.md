@@ -52,7 +52,8 @@ https://trailhead.salesforce.com/content/learn/trails/automate_business_processe
 Platform Event Triggered flows are just like a record triggered flow but the record is just one of File Events Platform Events instead of a sObject.
 
 
-To create a new Platform Event Triggered Flow go to Salesforce Setup and type Flows into the Quick Find and select Flows. then Click New Flow and Choose Platform Event Triggered Flow. Finally Click Create to Start Building your Flow.
+To create a new Platform Event Triggered Flow go to Salesforce Setup and type Flows into the Quick Find and select Flows. then Click New Flow and Choose Platform Event Triggered Flow.  Click Create to Start Building your new Flow.
+
 
 ![File Events  Flows 1](images/fileevents-fef-flows1.png)
 
