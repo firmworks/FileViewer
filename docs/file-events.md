@@ -57,7 +57,8 @@ To create a new Platform Event Triggered Flow go to Salesforce Setup and type Fl
 
 ![File Events  Flows 1](images/fileevents-fef-flows1.png)
 
-First tou will need to select one of the following Platform Events to start building automation with:
+You will need to select one of the following Platform Events to start building automation with:
+
 
 ![File Events  Flows 2](images/fileevents-fef-flows2.png)
 
