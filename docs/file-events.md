@@ -4,6 +4,7 @@
 # File Events
 
 File Events creates Salesforce Platform Events to allow you to create business logic based on Salesforce Content record changes. Salesforce does not allow Record Triggered flows on the Files objects, but the Platform Events published from the File Events package are based on the Content Document, Content Version, and Content Document Link. This allows you to create critical business logic based upon Salesforce File inserts, updates and deletions
+
 For reference here is a high level image of the Salesforce File Object Structure and how it works with FileViewer.
 
 ![File Events Metadata 1](images/fileevents-salesforce-file-structure.png)
