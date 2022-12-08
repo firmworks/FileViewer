@@ -112,6 +112,7 @@ Content Version Id - This is the Id of the Content Version. The Content Version 
 
 ## Considerations When Using File Events
 
-- If you are using Bulk Upload in FileViewer you will not be able to use the Content Version Event and will need to turn fully deactivate the Content Version Apex Trigger Setting. If you do not, it could result in the following error:
+- If you are using Bulk Upload feature within FileViewer (below version 0.26) you will not be able to use the Content Version Event and will need to turn fully deactivate the Content Version Apex Trigger Setting. If you do not, it could result in the following error:
+
 
 ![File Events  Flows 1](images/fileevents-considerations1.png)
