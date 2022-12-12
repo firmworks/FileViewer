@@ -1,5 +1,13 @@
 # Tips And Known Issues
 
+## Permission Set to Query All Files
+
+If you are in a FileViewer component and think you may not be seeing all Files in your search criteria, that could be the case! You mmy need to give you or a sub set of your users a specific permission. 
+
+NOTE: This permission can assigned to Users with View All Data permission and it will allow the user the ability to query ContentDocument and ContentVersion and retrieve all files in the org. Please be careful who you give this permission to 
+
+In order to enable this follow the Salesforce article here: https://help.salesforce.com/s/articleView?id=000381258&type=1
+
 ## Salesforce Images Low Quality Render
 
 ### Occasionally Salesforce will render poor quality images of a document (for instance a pdf)
