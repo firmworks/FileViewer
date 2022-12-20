@@ -3,11 +3,43 @@
 
 # FileViewer Release Notes
 
-## 0.24 August 
+## 0.26 December
 
-### What's Nww
+### What's New
 
-- Bulk Upload Function for File Tagger Button for Upload - Normally Salesforce only allow you to upload 10 files at a time but with the new Bulk File Upload feature you can upload 100X that many in a single go. 
+- Flow support Invocable Action To Get Public Links for Documents. Create emails with lists of document links, the benefits of using links over sending files are numerous.  [Flow Actions](features#flow-action-public-links)
+        - Update documents without having to send new files
+        - Delete links effectively redacting outdated or incorrect information
+        - Password protect links to prevent over sharing and URL replays
+        - Expire links to ensure files aren't exposed any longer than need be.
+
+- Ability to delete files from tabbed viewing controls - accessible through the designer.
+
+- Carousel View - Record's Content Viewer has an alternative to tabs, users can use left/right controls to navigate through files.
+    [Viewer](features#tabbed-viewer)
+
+
+### Enhancements
+
+- Tag and Upload changes
+    - Duplicate file upload check on bulk uploader. When using the bulk uploader a duplicate check is performed and allows the user to remove duplicates prevent uploading files that already are uploaded.
+
+    - Upload and Tag now has the ability to have 'Post Upload Actions'
+        - close - closes the modal
+        - show results - displays a fileviewer with the uploaded files in the same screen
+        - fileviewer - opens fileviewer in a new tab with the recent uploaded values
+
+    - Bulk file upload now performs updating of content in chunks of 25 to prevent triggers on ContentVersion/ContentDocument from hitting Salesforce governor limits.
+
+- FileViewer control
+    - Accepts url parameter of c__contentIds - as a comma delimited list of content document ids to display. Searching, filtering and all other behaviors are performed within the list of ids as the base.
+
+
+## 0.24 August
+
+### What's New
+
+- Bulk Upload Function for File Tagger Button for Upload - Normally Salesforce only allow you to upload 10 files at a time but with the new Bulk File Upload feature you can upload 100X that many in a single go.
 
     NOTE: If you have clickjack protection turned on you will need to add a trusted site to enable Bulk file Upload. Click [here](troubleshooting.md) for more information.
 
