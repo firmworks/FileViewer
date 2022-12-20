@@ -43,9 +43,9 @@
 
     NOTE: If you have clickjack protection turned on you will need to add a trusted site to enable Bulk file Upload. Click [here](troubleshooting.md) for more information.
 
-- Download Record Files Component - If you have a lot fo files in your system use this Bulk Download feature to get a zip file of all your important documents.
+- Download Record Files Component - If you have many files in your system use this Bulk Download feature to get a zip file of all your important documents.
 
-- Public Link Generation - Wether you want to generate a password protected public link for a single file or bulk generated public links for all your files, we have you covered. The New tabs in the FileViewer UI will allow users to create public link quicker than ever.
+- Public Link Generation - Whether you want to generate a password protected public link for a single file or bulk generated public links for all your files, we have you covered. The New tabs in the FileViewer UI will allow users to create public link quicker than ever.
 
 - File Sharing Enhancement - Sharing  file with another record in Salesforce usually takes a lot of navigation. With the sharing tab in FileViewer users can share an existing files with any other object they have access to
 
@@ -61,7 +61,7 @@
 
 ### Bug Fixes
 
-- There was a validation issue with currency fields in the List View UI for the FileViewer Component. It will say that "The entry is not a valid increment" but it sill save and update.  This no longer happens and the issue has been resolved.
+- There was a validation issue with currency fields in the List View UI for the FileViewer Component. It will say that "The entry is not a valid increment" but it still saves and updates.  This no longer happens and the issue has been resolved.
 
 --------------------------------------------------
 
@@ -108,7 +108,7 @@
 #### Reports
 
 - Reports can be scheduled to run to produce platform event to drive business process
-- hook into reports using a automation to provide you users insight into data that is out of compliance.
+- hook into reports using an automation to provide you users insight into data that is out of compliance.
 
 ### Bug Fixes
 
