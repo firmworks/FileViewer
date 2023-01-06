@@ -115,7 +115,7 @@ As an example requesting the files for an Account - Looping over the links and a
 
 ![Flow Input](images/features/flow_action/flow_loop_item_formula.png)
 ```text
-"<a href=\"" + {!Process_Links.distributionPublicUrl}  + " target=\"_blank\">" + {!Process_Links.name}   + "</a>" + "  Password: " + {!Process_Links.password}  + if(NOT(ISNULL({!Process_Links.expires})), " Expires: " + TEXT({!Process_Links.expires}) , "") + BR()+ BR()
+"<a href=\"" + {!Process_Links.distributionPublicUrl}  + "\" target=\"_blank\">" + {!Process_Links.name}   + "</a>" + "  Password: " + {!Process_Links.password}  + if(NOT(ISNULL({!Process_Links.expires})), " Expires: " + TEXT({!Process_Links.expires}) , "") + BR()+ BR()
 ```
 
 #### Concatenating/Adding the value in the loop to build a variable full of links
