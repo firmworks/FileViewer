@@ -2,6 +2,14 @@
 [Documentation](index.md)
 
 # FileViewer Release Notes
+## 0.27 January 2023
+
+### Fixes
+
+- File Reporting issue where reporting on Salesforce Objects that don't have Name as the name field has been corrected.
+- File Reporting issue where downloading results as a csv for tasks incorrectly attributed the subject column to contentdocumentid
+- Entity Sharing corrected issue not allowing searching for objects without a Name field (Task, Event, Case..etc)
+
 
 ## 0.26 December
 
