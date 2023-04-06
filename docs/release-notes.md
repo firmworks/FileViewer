@@ -19,7 +19,7 @@
 - Support to link a document to a library folder in Entity Sharing (Libary folders are not marked as searchable from the Salesforce schema)
 - New experience permission set to avoid having to clone the File Viewer permission set and remove access to the application.
 
-Fixes
+### Fixes
 - Entity Sharing - correctly resolves names now and doesn't show [object object]
 - Content Viewer - remove loading screen if user does not have acesss to specified record.
 - File Tagging - removed 'Step' verbage if uploading is only step available
