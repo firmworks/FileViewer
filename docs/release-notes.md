@@ -2,6 +2,30 @@
 [Documentation](index.md)
 
 # FileViewer Release Notes
+
+## 0.28
+
+### What's New
+- Reporting Enhancements
+    - Allow for more complex reporting scenarios with AND/OR in the UI
+    - See your SOQL syntax on screen to aid in report development.
+    - Multiple document reporting with filter sets. For instance if 3 documents each with their own criteria are required, FileViewer reporting now supports these complicated criteria.
+- Flow component for File Tagging
+    - Ensure documents come in with the correct tagging from screen flows
+- Flow component for File report validation. Visually aid users in a screen flow what documents are required to continue. Works with file reports to even block the continuation of a screen flow until documents are added to satisfy the constraints.
+- Public link generation now gives the ability to set the title, expirations and with password
+- Configuration Wizard - walks you through the process of creating a configuration to use and reuse for your users.
+- Support for Record Types on Content Version - Created a utility to cache Record Types and their picklist values for an admin user. Salesforce doesn't support access to this information without using an API and all users do not have API access - [Please Vote for This Idea](https://ideas.salesforce.com/s/idea/a0B8W00000GdVwoUAF/getting-picklist-values-based-on-record-type)
+- Support to link a document to a library folder in Entity Sharing (Libary folders are not marked as searchable from the Salesforce schema)
+- New experience permission set to avoid having to clone the File Viewer permission set and remove access to the application.
+
+Fixes
+- Entity Sharing - correctly resolves names now and doesn't show [object object]
+- Content Viewer - remove loading screen if user does not have acesss to specified record.
+- File Tagging - removed 'Step' verbage if uploading is only step available
+- File Viewer - Tif support for Safari on OSX
+- Home Screen - Detection of new Custom Permissions to aid in erroneous access to links.
+
 ## 0.27 January 2023
 
 ### Fixes
