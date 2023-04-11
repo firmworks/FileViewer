@@ -11,11 +11,11 @@ All System Administrator based profiles can see the File Report tab after instal
 
 Start off by clicking the Select Reports button to see some out of box reports based on standard Sales Cloud objects (Accounts, Contacts, and Opportunities). 
 
-![FileViewer Report Quick Reports](images/fileviewer-reporting-quick-reports1.png)
+![FileViewer Report Quick Reports](images/reporting/fileviewer-reporting-quick-reports1.png)
 
 Once the Reports UI is open click the load icon to the left of a report to fill in the criteria in the sections below.
 
-![FileViewer Report Quick Report Filters](images/fileviewer-reporting-quick-reports2.png)
+![FileViewer Report Quick Report Filters](images/reporting/fileviewer-reporting-quick-reports2.png)
 
 Clicking Run Report will return results from your org based on the filters established by the Quick Report selected.
 
@@ -43,6 +43,36 @@ You can also change the Selected Object by using the Selected Object drop down. 
 To remove a filter click the trashcan next to the filter row you wish to remove. 
 
 Follow the same steps above to add or remove a filter from the tagged documents section in Step 2.
+
+### Advanced Filtering
+
+#### Filter Sets
+
+Using Filters sets File Reporting can be even more powerful. A Filter Set represents a set of criteria for a single Salesforce objects or File you want to include in your report.
+
+When used in Section 1 of a report a Filter Set will functions as an additional way of grouping filters on a single object. This allow for more comprehensive filtering using AND and/or OR on your chosen object.
+
+When used in Section 2 of a report a Filter Set represents the same thing but there is also another option you can use to track multiple documents as part of a single report. For example, if you wanted to see if an account has both a file tagged as an NDA and a file tagged as an MSA based on a picklist tag field, you would do the following.
+
+First set up a Filter Set where you criteria is Picklist equal to = NDA. Click + Filter Set and add a Second set with the criteria Picklist equal to = MSA. Finally change you operator to And Has. The And Has operator will check for multiple Files for a given object.
+
+![FileViewer Reporting Filter Sets And Has](images/reporting/filtersets1.png)
+
+#### Filter Set Evaluation Pattern
+
+You can use this box in a Filter Set to determine how your logic evaluates. If all teh operators between your criteria are the same you can use the drop down to set the operator. If your logic needs to change between nodes you can type your custom logic in the Filter Set Evaluation Pattern box. Once you type logic in this box the Drop down list will disappear since they are no longer relevant. To get them back remove your custom logic.
+
+![FileViewer Reporting Filter Sets Pattern](images/reporting/filtersets2.png)
+
+#### View Syntax Button
+
+This button can be clicked at any time to show you the current logic you are using in your filter.
+
+![FileViewer Reporting Filter Sets View Syntax](images/reporting/filtersets3.png)
+
+If you are using the And Has operator the syntax will show a set of criteria for each Filter Set separated by a comma.
+
+![FileViewer Reporting Filter Sets And Has Syntax](images/reporting/filtersets4.png)
 
 ### Record Return Criteria
 

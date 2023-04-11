@@ -11,11 +11,15 @@
 1. [Enhanced Entity Sharing Management](#enhanced-entity-sharing-management)
 1. [Bulk Upload](#bulk-upload)
 1. [Tag and Update Existing Documents Quickly](#tag-and-update-existing-documents-quickly-and-easily)
+<<<<<<< Updated upstream
 1. [Multi file Viewer](#tabbed-viewer)
+=======
+1. [Enhanced Flow Support](#enhanced-flow-support)
+1. [Tabbed Viewer](#tabbed-viewer)
+>>>>>>> Stashed changes
 1. [Powerful File Reporting](#file-reporting)
 1. [File Auditing and Compliance](#file-auditing-and-compliance)
 1. [Record Reports](#record-reports)
-1. [Public Link Flow Action](#flow-action-public-links)
 
 ## Upload And Tag
 
@@ -67,14 +71,23 @@ Quickly and easily work with your existing files and documents to give them the 
 
 ![List Edit Last Value](images/features/last_value_edit.gif)
 
+## Enhanced Flow Support
+
+Guide users and customer through a flow to upload files as part of a process and use reporting to validated the files exist before moving on to future steps
+
+![FileViewer in a Flow](/docs/images/features/fileviewer-in-a-flow.gif)
+
 ## Tabbed Viewer
 
 Load viewable file content directly on the screen so users do not have to navigate away from the record they are on.
 
 ![Tabbed viewers](images/features/tabbed_files.gif)
 
+<<<<<<< Updated upstream
 ![Carousel viewers](images/features/viewer/carousel.gif)
 
+=======
+>>>>>>> Stashed changes
 ## File Reporting
 
 Report on files and their field values - something not currently available in Salesforce
@@ -93,40 +106,3 @@ Reports can be built to your exacting requirements and scheduled to run on your 
 
 Save a report and drop a component on a layout to help alert your users if documentation is missing.
 
-## Flow Action Public Links
-
-![Example Flow](images/features/flow_action/example_flow.png)
-
-Using Salesforce Flows you can create public links to add into emails.
-There are numerous reasons why providing links to content is preferrable to sending the files directly.
-
-![Flow Input](images/features/flow_action/flow_input.png)
-
-- Record Id Can be any record ID - Use Content Document Id or Content Version Id to generate public links for individual files. Use any object id to create multiple public links - use FileViewer Configuration Name to create a filter on which files to use for an object.
-- Expiration DateTime - Use to create an expiration DateTime of when the links will expire.
-- Password Protect Link - True/False if Salesforce should generate a password to access the shared file.
-- Return Most Recent Link - True/False if public links already exists for the file, return the latest one to use instead of generating a new one.
-
-### Loop the results and build your links
-
-As an example requesting the files for an Account - Looping over the links and appending them to an email body.
-
-#### Create a formula variable to format the results
-
-![Flow Input](images/features/flow_action/flow_loop_item_formula.png)
-```text
-"<a href=\"" + {!Process_Links.distributionPublicUrl}  + "\" target=\"_blank\">" + {!Process_Links.name}   + "</a>" + "  Password: " + {!Process_Links.password}  + if(NOT(ISNULL({!Process_Links.expires})), " Expires: " + TEXT({!Process_Links.expires}) , "") + BR()+ BR()
-```
-
-#### Concatenating/Adding the value in the loop to build a variable full of links
-
-![Append Formula Variable](images/features/flow_action/flow_loop_item_append_to_variable.png)
-
-#### Creating the Send Email Action
-
-![Send Rich Text Email](images/features/flow_action/flow_send_email.png)
-
-#### Resulting Email
-
-
-![Example Email](images/features/flow_action/example_email.png)

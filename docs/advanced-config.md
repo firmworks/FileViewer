@@ -159,40 +159,6 @@ You can add any of the following components to a page layout. Each Component has
 
          1. InternalUsers – Defaults the toggle to Default
 
-<!--#### **File Tagger**
-
-1. Setup:
-
-   1. Record Id - This section will allow you to pass in a record id to give the component context do the record page it is on.
-
-1. Configuration:
-
-   1. Allowed File Types – a comma delimited list of file types the user is allowed to upload.
-
-   1. Configuration Name – The name of the FileViewer Configurations Metadata record you want to use to source your tagger screen
-
-   1. Allow Multiple Documents - This box will allow the user to upload multiple documents with oud having to close and reopen the UI.
-
-   1. Filter Fields - A comma delimited list of Content Version fields you want to use to tag the File.
-
-   1. Show Sharing Options - Toggle this to show or hide all sharing options.
-
-   1. Show Sharing Visibility – Toggle this to show and hide Share with experience users toggle
-
-   1. Show Sharing Type – Toggle this show and hide the Enhanced record access toggle.
-
-   1. Sharing Type – This will default the Sharing type regardless of Show Sharing type being true.
-
-      1. 1. I - Defaults the toggle to Record.
-
-      1. V - Defaults the toggle to Viewer.
-
-   1. Sharing Visibility – This will allow you to default the Sharing Options regardless of Show Sharing Options being true.
-
-      1. AllUsers – Defaults the toggle to All Users
-
-      1. InternalUsers – Defaults the toggle to Default-->
-
 #### **FileViewer**
 ![FileViewer Configure FileViewer](images/fileviewer-configure-file-viewer.png)
 
@@ -230,20 +196,40 @@ You can add any of the following components to a page layout. Each Component has
 
    1. Cache Id – If you want the behavior to be different between instances of the file's viewer. Use this variable to a unique variable or name to reference the way you have the component set up in each place. If you have the component set up on the account a very specific, you want to use for every object, use the cache id to not have to setup all the settings again.
 
-#### **Tabbed Display of Record Content**
+#### **Record's Content Viewer**
 ![FileViewer Configure Record Content Viewer](images/fileviewer-configure-record-content-viewer.png)
 
 1. Configuration:
 
    1. Record Id - This is used in Experience to set the Record Id for the component to run. Use {!recordId} to pass in the current records Id for context.
 
+   1. Name - This is the name of the configuration you want to use to filter the documents. If your configuration has a [Default Filter](#default-filter) 
+
 1. Appearance:
 
    1. Max Height - This will set the max height on the component on the page layout. If this is not set the height will be set based on the number of returned results.
 
+   1. View Style - There are several view styles available;
+
+      1. Default - This view will show a tab on the top row and will load the tab each time it is clicked  to help page load times.
+      1. Scoped -This view will show a tab on the top row and will load all tabs at once. 
+      1. Vertical - This will show the tabs on the left side of the preview.
+      1. Carousel - This will load a files to alow more of a slide show style view.
+
+
+1. Behavior: 
+
+   1. Show Delete - This will allow teh user to see a Delete button in the actions menu.
+
+   ![FileViewer Configure Record Content Viewer Delete](images/advancedconfig/records-content-viewer-delete.png)
+
 
 ### **Setting up a FileViewer Configuration**
 If you want to use the same configuration for more than one use of the component you can create a FileViewer Configuration. In the App Finder type 'Configurator', and select the FileViewer Configurator tab. In order to see this tab a user must have the FileViewer Configuator permission set. To assign a permission set please follow the documentation from Salesforce (https://help.salesforce.com/s/articleView?id=sf.perm_sets_assigning.htm).
+
+The configuration steps, seen below, will guide you through all of the following sections. If you choose Show All instead of using the configuration steps the following documentations will guide you through the sections.
+
+![fileviewer configuration Steps](images/advancedconfig/configuration-guided-steps.png)
 
 #### Configuration Naming
 
