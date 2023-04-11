@@ -11,7 +11,12 @@
 1. [Enhanced Entity Sharing Management](#enhanced-entity-sharing-management)
 1. [Bulk Upload](#bulk-upload)
 1. [Tag and Update Existing Documents Quickly](#tag-and-update-existing-documents-quickly-and-easily)
+<<<<<<< Updated upstream
 1. [Multi file Viewer](#tabbed-viewer)
+=======
+1. [Enhanced Flow Support](#enhanced-flow-support)
+1. [Tabbed Viewer](#tabbed-viewer)
+>>>>>>> Stashed changes
 1. [Powerful File Reporting](#file-reporting)
 1. [File Auditing and Compliance](#file-auditing-and-compliance)
 1. [Record Reports](#record-reports)
@@ -67,14 +72,23 @@ Quickly and easily work with your existing files and documents to give them the 
 
 ![List Edit Last Value](images/features/last_value_edit.gif)
 
+## Enhanced Flow Support
+
+Guide users and customer through a flow to upload files as part of a process and use reporting to validated the files exist before moving on to future steps
+
+![FileViewer in a Flow](/docs/images/features/fileviewer-in-a-flow.gif)
+
 ## Tabbed Viewer
 
 Load viewable file content directly on the screen so users do not have to navigate away from the record they are on.
 
 ![Tabbed viewers](images/features/tabbed_files.gif)
 
+<<<<<<< Updated upstream
 ![Carousel viewers](images/features/viewer/carousel.gif)
 
+=======
+>>>>>>> Stashed changes
 ## File Reporting
 
 Report on files and their field values - something not currently available in Salesforce
