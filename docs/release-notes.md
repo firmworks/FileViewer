@@ -2,7 +2,13 @@
 [Documentation](index.md)
 
 # FileViewer Release Notes
+## 0.29
 
+### Fixes
+
+- Fixed issue with Lookup component used for lookup fields (visible from FileViewer List View and Taxonomy screen)
+- Added known issue where Salesforce throws an exception using undocumented SOQL feature to support Filtered lookups.
+    
 ## 0.28
 
 ### What's New
