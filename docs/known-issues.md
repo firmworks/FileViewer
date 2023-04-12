@@ -1,6 +1,19 @@
 # Tips And Known Issues
 
-## Permission Set to Query All Files
+## Known Issues
+
+### Filter Lookup Limited Support
+
+Filtered Lookups are not currently supported in the following FileViewer components/views:
+
+- FileViewer - Tile View
+- File Tagger Button for Upload
+
+This is due to an issue with how Salesforce allows us to access filtered lookup criteria via apex
+
+## Tips
+
+### Permission Set to Query All Files
 
 If you are in a FileViewer component and think you may not be seeing all Files in your search criteria, that could be the case! You mmy need to give you or a sub set of your users a specific permission. 
 
@@ -8,9 +21,9 @@ NOTE: This permission can assigned to Users with View All Data permission and it
 
 In order to enable this follow the Salesforce article here: https://help.salesforce.com/s/articleView?id=000381258&type=1
 
-## Salesforce Images Low Quality Render
+### Salesforce Images Low Quality Render
 
-### Occasionally Salesforce will render poor quality images of a document (for instance a pdf)
+#### Occasionally Salesforce will render poor quality images of a document (for instance a pdf)
 
 ![Poor Quality Image](images/knownissues/imagequality/badrender.png)
 
@@ -29,7 +42,7 @@ Luckily Salesforce provides a way to regenerate images.
 ![Regenerate Images](images/knownissues/imagequality/regenerate-preview.gif)
 
 
-### Using The Alternate Viewer
+#### Using The Alternate Viewer
 
 If using Google's Chrome browser window and you have permissions (check with your internal security officer first) you can use an extension such as:
 
@@ -40,7 +53,7 @@ If using Google's Chrome browser window and you have permissions (check with you
 
 ![Using Browser Extensions](images/knownissues/imagequality/browser-extension.gif)
 
-### File Sharing and Access Explained
+#### File Sharing and Access Explained
 
 Access to a Salesforce Files is determine by two different aspects of the associated Content Document Links:
 
@@ -52,7 +65,7 @@ Access to a Salesforce Files is determine by two different aspects of the associ
     - AllUsers - The file is available to everyone with access  based on the ShareType
     - InternalUsers - The file is available to only infernal user who have access based on the ShareType.
 
-### Salesforce Files Object Structure
+#### Salesforce Files Object Structure
 
 Below is an Entity Relationship Diagram (ERD) of the Salesforce Files Schema. This is not all of them but it contains the majority of the relvant object for FileViewer use.
 
