@@ -2,13 +2,31 @@
 [Documentation](index.md)
 
 # FileViewer Release Notes
+
+## 0.30
+
+### What's New
+
+- Entity Sharing - Suggested Links
+   - Provides administrators the flexibility to suggest which relationships are important to their Users. Provides Users 1-click functionality to share files easily with related records.
+   See our documentation guide for more
+   - Added object type names to help remove ambiguity
+
+
+- Content Record Viewer
+    - Keyboard navigation support for carousel view
+
+- FileViewer Configurator
+    - Added additional help text
+    - Added Suggested Links configuration to sharing section
+    - new configurations auto open at the top
 ## 0.29
 
 ### Fixes
 
 - Fixed issue with Lookup component used for lookup fields (visible from FileViewer List View and Taxonomy screen)
 - Added known issue where Salesforce throws an exception using undocumented SOQL feature to support Filtered lookups.
-    
+
 ## 0.28
 
 ### What's New
