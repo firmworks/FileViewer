@@ -3,6 +3,13 @@
 
 # FileViewer Release Notes
 
+## 0.31
+
+### Fixes
+  
+- File Upload & Tagger For Flows
+   - Respect blank/empty values for flow component title
+  
 ## 0.30
 
 ### What's New
@@ -20,6 +27,7 @@
     - Added additional help text
     - Added Suggested Links configuration to sharing section
     - new configurations auto open at the top
+
 ## 0.29
 
 ### Fixes
