@@ -52,7 +52,21 @@ Create, Delete, View Content Public links easily to provide external users acces
 
 Create, Delete, View Content Document Link records directly on the layout. Easily create links to any object record in Salesforce more than just users.
 
-![Sharing Management](images/features/entity_sharing.gif)
+![Sharing Management](images/features/entity_sharing/entity_sharing.gif)
+
+### Suggested Links To Records
+
+Enable your users to quickly give access to related records using suggested links.
+
+Suggested links look at the currently linked records to the file and gives a one click option to create relationships to related records.
+
+Example - This file was linked to an opportunity. By using a FileViewer configuration the suggested path of 'AccountId' is used to suggest the Account 'DIA' for the Opportunity 'DIA'.
+
+![Suggested Accounts](images/features/entity_sharing/features-related-suggested-accountid.png)
+
+After the Account 'DIA' is linked to the note, the child contact records are then suggested.
+
+![Suggested Contacts](images/features/entity_sharing/features-related-suggested-contacts.png)
 
 ## Bulk Upload
 

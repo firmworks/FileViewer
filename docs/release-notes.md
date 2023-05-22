@@ -6,15 +6,15 @@
 ## 0.31
 
 ### Fixes
-  
+
 - File Upload & Tagger For Flows
    - Respect blank/empty values for flow component title
-  
+
 ## 0.30
 
 ### What's New
 
-- Entity Sharing - Suggested Links
+- Entity Sharing - [Suggested Links Feature](features.md#suggested-links-to-records)
    - Provides administrators the flexibility to suggest which relationships are important to their Users. Provides Users 1-click functionality to share files easily with related records.
    See our documentation guide for more
    - Added object type names to help remove ambiguity
