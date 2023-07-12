@@ -3,6 +3,19 @@
 
 # FileViewer Release Notes
 
+## 0.33
+
+### Fixes
+
+- Fixed issue where Date fields were not handled correctly when searching.
+  
+## 0.32
+
+### Enhancement
+
+- FileViewer
+   - Enabled FileViewer to be available to flows
+  
 ## 0.31
 
 ### Fixes
