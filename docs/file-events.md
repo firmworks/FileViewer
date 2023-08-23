@@ -17,7 +17,7 @@ https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_
 
 ## Configuration and Setup
 
-Once the File Events package has been installed you can use it right away. There are no permission sets to share or licenses to manage. 
+Once the File Events package has been installed you can use it right away. There are no permission sets to share or licenses to manage.
 
 ## File Event Management
 
@@ -29,7 +29,7 @@ The included Custom Metadata Type to control the Platform Event generation is ca
 
 ![File Events Metadata 1](images/fileevents-fem-metadata1.png)
 
-There are three records in this Metadata Type, one for each sObject Involved in Salesforce Files; Content Document, Content Version, and Content Document Link. Each record controls the trigger for that object and when it will publish the Platform Event. 
+There are three records in this Metadata Type, one for each sObject Involved in Salesforce Files; Content Document, Content Version, and Content Document Link. Each record controls the trigger for that object and when it will publish the Platform Event.
 
 To Fully Disable a File from creating a Platform Event uncheck all of the action type boxes (After Insert, After Update, After Delete, After Undelete), then save the record. The Example below would mean that we would not be creating Platform Events for the Content Version Object, thus automation could not be build from it using the File Events Package.
 
@@ -79,7 +79,7 @@ Once you have selected which Platform Event to use, you can then continue buildi
 Action - This field will tell you what context the platform event was created in. It can be one of the following values:
 
 - afterInsert
-- afterUpdate 
+- afterUpdate
 - afterDelete
 - afterUndelete
 
@@ -90,13 +90,13 @@ Content Document Id - This is the Content Document Id that created the Platform 
 Action - This field will tell you what context the platform event was created in. It can be one of the following values:
 
 - afterInsert
-- afterUpdate 
-- afterDelete *Salesforce doesn't fire this event in all circumstances - for instance if a file is deleted their is no cascade delete events for all of it's content document links.
+- afterUpdate
+- afterDelete *Salesforce doesn't fire this event in all circumstances - for instance if a file is deleted there is no cascade delete events for all of its content document links.
 
 - afterUndelete *Not Available
 
 
-Content Document Id - This is the Content Document Id that created the Platform Event. 
+Content Document Id - This is the Content Document Id that created the Platform Event.
 
 Content Document Link Id - This is the Id of the Content Document Link. This is a junction object that connects a Content Document and any other File enabled sObject.
 
@@ -108,7 +108,7 @@ Action - This field will tell you what context the platform event was created in
 
 - afterInsert *Use ContentDocument insert event instead
 
-- afterUpdate 
+- afterUpdate
 - afterDelete *Use ContentDocument delete event instead
 
 - afterUndelete *This currently is unsupported
