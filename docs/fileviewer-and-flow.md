@@ -17,7 +17,7 @@ In order to enable your user to tag and upload files in a file you will need to 
 
 ### File Upload & Tagger for Flows
 
-This component functions similarly to the [File Tagger Button for Upload](/docs/component-appendix.md#file-tagger-button-for-upload-appendix) with a few extra design elements.
+This component functions similarly to the [File Tagger Button for Upload](component-appendix.md#file-tagger-button-for-upload-appendix) with a few extra design elements.
 
 ![File Upload and Tag for Flow](images/flows/tagandupload1.png)
 
@@ -35,7 +35,7 @@ Generally speaking this component can be used whenever the out of box Upload Fil
 
 ### File Report Runner for Flow Records
 
-This component functions similarly to the [File Report Runner for Records](/docs/advanced-config.md#file-report-runner-for-records) with a few extra design elements.
+This component functions similarly to the [File Report Runner for Records](advanced-config.md#file-report-runner-for-records) with a few extra design elements.
 
 ![File Report Runner for Flow Records](images/flows/reportrunner.png)
 
@@ -53,7 +53,7 @@ This component functions similarly to the [File Report Runner for Records](/docs
 
    - Report_With_No_Result - This means you want this report to block the flow if the referenced Report Name has no results based on the Related Record. If you criteria comes back with no results the user cannot continue the flow until the report returns a result.
 
-This component is incredibly powerful when it comes to making sure a User has uploaded the correct files for your process. A good example of this is most application processes you will required 2 or more documents of a certain type to make sure the user has appropriately applied. In this case we could use one or more reports to tell the user what they are missing as they upload documents. These documents can be manually tagged by the users or can be automatically tagged using [FileViewer Configuration](/docs/advanced-config.md#setting-up-a-fileviewer-configuration) Default Values. Once a user uploads a document the report will check if it satisfies one or more of the report components used andd give them an error if documents are still missing when they click the finish button in the flow.
+This component is incredibly powerful when it comes to making sure a User has uploaded the correct files for your process. A good example of this is most application processes you will required 2 or more documents of a certain type to make sure the user has appropriately applied. In this case we could use one or more reports to tell the user what they are missing as they upload documents. These documents can be manually tagged by the users or can be automatically tagged using [FileViewer Configuration](advanced-config.md#setting-up-a-fileviewer-configuration) Default Values. Once a user uploads a document the report will check if it satisfies one or more of the report components used andd give them an error if documents are still missing when they click the finish button in the flow.
 
 ## Create and Send Public Links in a Flow
 

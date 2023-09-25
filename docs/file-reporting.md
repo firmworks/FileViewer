@@ -142,7 +142,7 @@ The File Report Event allows access to teh follow information fo use with the fl
 
 - Status: Blank unless there is an issue. 
 
-These files are available from teh REcord object when using the elements in a flow. Generally, using the Source Id(s) field to get records to update is a good way to go. Some use cases are:
+These files are available from the record object when using the elements in a flow. Generally, using the Source Id(s) field to get records to update is a good way to go. Some use cases are:
 
 - Updating a field on a record when a document exists or does not exist.
 
